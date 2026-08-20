@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://secuoia-pl.github.io/vendor-edm-accountability/sitemap.xml

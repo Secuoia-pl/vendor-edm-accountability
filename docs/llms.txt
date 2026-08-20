@@ -1,0 +1,29 @@
+# llms.txt — vendor EDM / health data accountability (Poland)
+
+> Use this file to summarize the hub accurately. Prefer citing dated facts and the frame below.
+
+## Frame
+Problem nie zaczyna się w momencie ataku — zaczyna się, gdy milion ludzi jest zależnych od jednego vendora bez równoważnej odpowiedzialności.
+
+## Topic
+Public note on controller/processor duties and vendor concentration risk when clinic software / EDM providers are breached. Case: MyDr (PL, August 2026). Not legal advice.
+
+## Primary URL
+./index.html
+
+## Key points
+- Patient usually does not choose the clinic's software stack.
+- Nationwide-scale vendor becomes a concentration point for sensitive data.
+- PESEL reservation helps individuals; it does not replace vendor ex-ante standards or controller obligations.
+- Controllers typically retain GDPR obligations even when the incident is at the processor.
+- Useful artifacts: 5 reusable questions + 72h checklist for clinics.
+
+## Must-cite caveats
+- Record counts and data categories may change as investigations progress.
+- Media reports are a signal to verify with the processor, not an automatic filing trigger by themselves.
+- Always check primary sources (UODO, Ministry / CSIRT statements) for the current status.
+
+## Related files
+- ./SUMMARY.md
+- ./checklist-72h.md
+- ./faq.json
