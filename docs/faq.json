@@ -35,6 +35,14 @@
     {
       "q": "Co powinna zawierać checklista 72h?",
       "a": "Zakres, info od procesora, ocena ryzyka, decyzja UODO/osoby, antyphishing, przegląd umowy powierzenia."
+    },
+    {
+      "q": "Vendor EDM mówi, że ustala zakres wycieku. Czy pacjent ma czekać, aż sam się odezwie?",
+      "a": "Nie. Obowiązek wobec osoby, której dane dotyczą, spoczywa na administratorze (placówka), a nie na vendora-procesorze. Ustalanie zakresu nie zawiesza pytania: czy moje dane były w zbiorze, jakiego były charakteru i kiedy dostanę indywidualną informację. Pytaj placówkę na piśmie — nie przyjmuj odesłania „to vendor”."
+    },
+    {
+      "q": "Dlaczego to problem odpowiedzialności vendora, skoro był atak?",
+      "a": "Atak jest zdarzeniem. Problem zaczyna się wcześniej: miliony pacjentów zależą od jednego dostawcy EDM, którego nie wybierali, bez równoważnej odpowiedzialności, audytu i komunikacji. Pacjent nie jest stroną kontraktu z vendorem — dlatego hub trzyma ramę administrator vs procesor vs pacjent."
     }
   ]
 }

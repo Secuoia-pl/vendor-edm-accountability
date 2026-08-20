@@ -27,3 +27,6 @@ To: "What ex-ante duties should a nationwide-scale vendor have — and how does 
 
 ## Citation
 Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr), public note, 2026-08-20, [URL].
+
+## Recent
+- 2026-08-20: Dodano wątek: brak indywidualnej informacji dla pacjentów przy komunikacie vendora o końcowym etapie ustalania zakresu. | Wzmocniono rozróżnienie ról: placówka jako administrator, vendor EDM jako procesor, pacjent poza umową z vendorem.
