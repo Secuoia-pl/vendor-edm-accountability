@@ -17,10 +17,9 @@ Publiczny artefakt pod plan **zero DM** / SEO.
 
 1. Wrzuć repo na GitHub  
 2. Settings → Pages → Deploy from branch → folder `/hub` **albo** skopiuj zawartość `hub/` do `/docs`  
-3. Podmień `REPLACE_WITH_YOUR_PAGES_URL` w:
-   - `index.html` (canonical)
-   - `sitemap.xml`
-4. W Search Console zgłoś sitemap (gdy masz domenę / Pages URL)
+3. Canonical URL i sitemap wskazują na:
+   `https://secuoia-pl.github.io/vendor-edm-accountability/`
+4. W Search Console zgłoś sitemap (opcjonalnie)
 
 ### Szybki lokalny podgląd
 
