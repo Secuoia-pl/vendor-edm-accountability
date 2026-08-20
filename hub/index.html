@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)</title>
+  <meta name="description" content="Wyciek u dostawcy EDM to nie tylko incydent IT. Rama, fakty, 5 pytań i checklista 72h dla placówek — do swobodnego wykorzystania. Case: MyDr." />
+  <link rel="canonical" href="https://REPLACE_WITH_YOUR_PAGES_URL/" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --ink: #1a1a1a;
+      --muted: #5a5a5a;
+      --line: #d9d4c8;
+      --accent: #1f4d3a;
+      --card: #fffef9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    header { margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+    .meta { color: var(--muted); font-size: 0.92rem; margin: 0.5rem 0 0; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.75rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; color: var(--accent); }
+    h3 { font-size: 1.05rem; margin: 1.25rem 0 0.5rem; }
+    p { margin: 0.65rem 0; }
+    a { color: var(--accent); }
+    .lead { font-size: 1.05rem; }
+    .box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 1rem 1.1rem;
+      margin: 1rem 0;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 0.75rem 0; }
+    th, td { border: 1px solid var(--line); padding: 0.55rem 0.65rem; text-align: left; vertical-align: top; }
+    th { background: #efeae0; }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; }
+    code { font-size: 0.9em; background: #efeae0; padding: 0.1em 0.35em; }
+    nav a { margin-right: 0.85rem; font-size: 0.92rem; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    .copy { white-space: pre-wrap; font-family: ui-monospace, Consolas, monospace; font-size: 0.86rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)",
+    "description": "Rama, fakty, pytania i checklista 72h dla placówek przy wycieku u dostawcy EDM.",
+    "inLanguage": "pl-PL",
+    "dateModified": "2026-08-20",
+    "about": ["RODO", "EDM", "cyberbezpieczeństwo", "ochrona danych zdrowotnych"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kto odpowiada za dane pacjentów, jeśli wyciek nastąpił u dostawcy EDM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zazwyczaj placówka medyczna pozostaje administratorem danych, a dostawca EDM działa jako procesor. Administrator ma własne obowiązki oceny ryzyka, zgłoszenia i — przy wysokim ryzyku — zawiadomienia osób. Status ról wynika z umowy i faktów przetwarzania."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy zastrzeżenie PESEL rozwiązuje problem wycieku danych medycznych?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Zastrzeżenie PESEL ogranicza część ryzyk tożsamościowych, ale nie zmienia modelu koncentracji danych zdrowotnych u vendora ani nie zastępuje obowiązków administratora i standardów security dostawcy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ile czasu ma placówka na zgłoszenie naruszenia do UODO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jeśli naruszenie wymaga zgłoszenia, administrator powinien zgłosić je bez zbędnej zwłoki, w miarę możliwości w ciągu 72 godzin od stwierdzenia naruszenia — licząc od momentu, gdy administrator powziął o nim wiedzę (np. po informacji od procesora)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy sam komunikat medialny o wycieku wystarczy, by zgłaszać naruszenie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Doniesienia medialne mogą skłonić do weryfikacji u procesora, ale decyzja o zgłoszeniu powinna wynikać z własnej, udokumentowanej oceny zakresu i ryzyka dla danych danej placówki."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie pytania warto zadać vendorowi EDM przed kolejnym incydentem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Warto dopytać o baseline security, prawo audytu, listę podprocesorów, SLA powiadomień o incydencie, zakres logów/forensics oraz warunki exit i eksportu danych."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dlaczego to jest temat publiczny, a nie tylko IT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pacjent zwykle nie wybiera oprogramowania placówki, a przy skali krajowej jednego dostawcy skutki incydentu mogą dotyczyć milionów osób. To kwestia modelu odpowiedzialności, nie wyłącznie technicznego ataku."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy wystarczy opublikować informację o wycieku na stronie przychodni?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Przy wysokim ryzyku RODO wymaga zawiadomienia osób, których dane dotyczą, bez zbędnej zwłoki. Sam komunikat na stronie zwykle nie zastępuje indywidualnego zawiadomienia, gdy jest wymagane."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Co powinna zawierać checklista 72h dla administratora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Potwierdzenie roli i zakresu, pisemne info od procesora, ocena ryzyka, decyzja o zgłoszeniu do UODO, plan zawiadomień pacjentów, monitoring phishingu oraz przegląd umowy powierzenia."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)</h1>
+      <p class="meta">Stan na 20.08.2026 · materiał publiczny do swobodnego wykorzystania · <a href="./SUMMARY.md">SUMMARY</a> · <a href="./llms.txt">llms.txt</a> · <a href="./checklist-72h.md">checklist 72h</a></p>
+      <nav aria-label="Spis">
+        <a href="#tldr">TL;DR</a>
+        <a href="#fakty">Fakty</a>
+        <a href="#rama">Rama</a>
+        <a href="#pytania">5 pytań</a>
+        <a href="#checklist">Checklista</a>
+        <a href="#faq">FAQ</a>
+        <a href="#changelog">Changelog</a>
+      </nav>
+    </header>
+
+    <p class="lead">
+      Wyciek u dostawcy oprogramowania dla placówek medycznych nie jest tylko incydentem IT.
+      To test modelu, w którym pacjent nie wybiera systemu, a dane zdrowotne koncentrują się
+      u vendora obsługującego tysiące administratorów. Poniżej: co wiadomo, jakie pytania warto
+      zadawać i checklista 72h dla placówek — do swobodnego wykorzystania.
+    </p>
+
+    <div class="box" id="tldr">
+      <h2 style="margin-top:0">TL;DR</h2>
+      <ul>
+        <li><strong>Rama:</strong> problem zaczyna się od zależności od vendora, nie od samego ataku.</li>
+        <li><strong>RODO:</strong> placówka zwykle nie „zasłania się” procesorem — ma własne obowiązki.</li>
+        <li><strong>Publicznie:</strong> PESEL pomaga osobie; nie zastępuje standardów ex ante dla vendora skali krajowej.</li>
+      </ul>
+    </div>
+
+    <h2 id="fakty">Co wiemy / czego nie wiemy</h2>
+    <p class="meta">Weryfikuj daty i źródła przed cytowaniem. Liczby bywają aktualizowane w toku śledztwa.</p>
+    <table>
+      <thead>
+        <tr><th>Element</th><th>Opis (roboczy)</th><th>Źródło / status</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Podmiot</td>
+          <td>Dostawca oprogramowania dla placówek (MyDr)</td>
+          <td>komunikaty publiczne MC / media</td>
+        </tr>
+        <tr>
+          <td>Skala</td>
+          <td>komunikowana skala rzędu milionów rekordów / osób; tysiące placówek</td>
+          <td>potwierdzać bieżącymi komunikatami</td>
+        </tr>
+        <tr>
+          <td>Rodzaj danych</td>
+          <td>wskazywane m.in. dane identyfikacyjne i informacje związane z opieką medyczną</td>
+          <td>zakres może być doprecyzowywany</td>
+        </tr>
+        <tr>
+          <td>Nadzór</td>
+          <td>kontrola / działania UODO oraz służb</td>
+          <td>komunikaty UODO</td>
+        </tr>
+        <tr>
+          <td>Czego nie wiemy</td>
+          <td>ostateczny zakres per placówka; pełny wektor ataku; finalna lista kategorii danych</td>
+          <td>oczekiwanie na raporty forensics / komunikaty</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="rama">Przesunięcie pytania</h2>
+    <div class="box">
+      <p><strong>Rama:</strong> Problem nie zaczyna się w momencie ataku — zaczyna się, gdy milion ludzi jest zależnych od jednego vendora bez równoważnej odpowiedzialności.</p>
+      <p>Zamiast: „czy zhakowali?” / „czy zastrzec PESEL?”</p>
+      <p>Lepiej: „jakie obowiązki ex ante powinien mieć vendor EDM o zasięgu krajowym — i jak pacjent ma w praktyce ustalić, czy jest w zakresie?”</p>
+    </div>
+
+    <h2 id="pytania">5 pytań (do skopiowania)</h2>
+    <ol>
+      <li>Jakie minimum security i testów powinien spełniać vendor EDM działający w skali tysięcy placówek?</li>
+      <li>Jak wygląda SLA powiadomienia administratorów o incydencie (treść, zakres, deadline)?</li>
+      <li>Jak obywatel ma w praktyce ustalić „czy ja jestem w zakresie” w ciągu dni, nie miesięcy?</li>
+      <li>Jakie elementy umowy powierzenia (audyt, podprocesorzy, exit) były realnie egzekwowalne przed incydentem?</li>
+      <li>Co z wniosków z tego przypadku wejdzie do standardu ex ante — zanim pojawi się kolejny vendor?</li>
+    </ol>
+
+    <h2 id="checklist">Checklista 72h dla administratora (skrót)</h2>
+    <p>Pełna wersja: <a href="./checklist-72h.md">checklist-72h.md</a> (do kopiowania / PDF).</p>
+    <ol>
+      <li>Potwierdź, czy korzystacie z danego vendora i w jakim zakresie (EDM / terminarz / inne).</li>
+      <li>Wyślij pisemne zapytanie do procesora: zakres, kategorie danych, timeline, rekomendacje.</li>
+      <li>Udokumentuj ocenę ryzyka dla Waszych osób / danych.</li>
+      <li>Zdecyduj o zgłoszeniu do UODO (i ewentualnym zawiadomieniu pacjentów).</li>
+      <li>Przygotuj komunikację antyphishingową (recepty, wizyty, „dopłaty”).</li>
+      <li>Przejrzyj umowę powierzenia: audyt, SLA, podprocesorzy, exit.</li>
+    </ol>
+
+    <h2 id="faq">FAQ</h2>
+
+    <h3>Kto odpowiada za dane pacjentów, jeśli wyciek nastąpił u dostawcy EDM?</h3>
+    <p>Zazwyczaj placówka pozostaje administratorem, a dostawca działa jako procesor. Administrator ma własne obowiązki — nie „znika” tylko dlatego, że incydent był u procesora.</p>
+
+    <h3>Czy zastrzeżenie PESEL rozwiązuje problem?</h3>
+    <p>Nie. To ochrona osoby w warstwie tożsamości. Nie zastępuje odpowiedzialności i standardów po stronie vendora oraz obowiązków administratora.</p>
+
+    <h3>Ile czasu na zgłoszenie do UODO?</h3>
+    <p>Gdy zgłoszenie jest wymagane: bez zbędnej zwłoki, w miarę możliwości w 72h od stwierdzenia naruszenia przez administratora.</p>
+
+    <h3>Czy news w mediach = automatyczny obowiązek zgłoszenia?</h3>
+    <p>Nie automatycznie. To sygnał do weryfikacji. Decyzja powinna wyniknąć z faktów dotyczących Waszego zakresu danych i oceny ryzyka.</p>
+
+    <h3>Jakie pytania zadać vendorowi przed kolejnym razem?</h3>
+    <p>Baseline security, audyt, podprocesorzy, SLA powiadomień, forensics/logi, exit i eksport danych.</p>
+
+    <h3>Dlaczego to temat publiczny, nie tylko IT?</h3>
+    <p>Bo pacjent zwykle nie wybiera stacku, a koncentracja danych u jednego dostawcy ma skutki systemowe.</p>
+
+    <h3>Czy wpis na stronie przychodni wystarczy zamiast zawiadomienia pacjentów?</h3>
+    <p>Przy wysokim ryzyku zwykle nie — potrzebne jest zawiadomienie osób, gdy przepisy tego wymagają.</p>
+
+    <h3>Co powinna zawierać checklista 72h?</h3>
+    <p>Zakres, info od procesora, ocena ryzyka, decyzja UODO/osoby, antyphishing, przegląd umowy.</p>
+
+    <h2 id="cytowanie">Jak cytować</h2>
+    <div class="box copy">Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr), materiał publiczny, stan na 20.08.2026, [URL].</div>
+
+    <h2 id="changelog">Changelog</h2>
+    <ul>
+      <li><strong>2026-08-20</strong> — v0.1 szkielet huba: rama, fakty (robocze), 5 pytań, checklista, FAQ, schema.</li>
+    </ul>
+
+    <footer>
+      <p>Materiał informacyjny / research note. Nie stanowi porady prawnej. Wolno kopiować fragmenty z podaniem źródła.</p>
+      <p>Powiązane: <a href="./README.md">README</a> · <a href="./SUMMARY.md">SUMMARY</a> · <a href="./llms.txt">llms.txt</a></p>
+    </footer>
+  </div>
+</body>
+</html>

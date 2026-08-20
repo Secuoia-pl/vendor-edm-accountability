@@ -1,0 +1,19 @@
+id,sciezka,odbiorca,email,cc,temat,szablon,priorytet,status,zrodlo_kontaktu,uwagi
+M01,Media,Niebezpiecznik — redakcja,redakcja@niebezpiecznik.pl,,Brief: kąt „odpowiedzialność vendora” przy danych zdrowotnych (MyDr),brief_media,1,do_wyslania,https://niebezpiecznik.pl/kontakt/,Nie używać do szkoleń (to szkolenia@)
+M02,Media,Zaufana Trzecia Strona — Adam,adam@zaufanatrzeciastrona.pl,,Brief: kąt vendor/łańcuch powierzeń przy MyDr,brief_media,1,do_wyslania,https://zaufanatrzeciastrona.pl/kontakt/,Sprawy redakcyjne
+M03,Media,Zaufana Trzecia Strona — Anna,anna@zaufanatrzeciastrona.pl,,Brief: kąt vendor/łańcuch powierzeń przy MyDr,brief_media,1,do_wyslania,https://zaufanatrzeciastrona.pl/kontakt/,Można wysłać równolegle lub zamiast M02
+M04,Media,Sekurak — redakcja,sekurak@sekurak.pl,,Brief: kąt „odpowiedzialność vendora” przy danych zdrowotnych,brief_media,1,do_wyslania,https://sekurak.pl/kontakt/,
+M05,Media,CyberDefence24 — redakcja,redakcja@cyberdefence24.pl,,Brief pod kątem odpowiedzialności vendora (MyDr),brief_media,1,do_wyslania,Komunikaty CD24 (publiczny mail redakcji),
+M06,Media,Business Insider Polska — redakcja,redakcja@businessinsider.com.pl,,Kąt konsumencki: pacjent bez wyboru systemu vs skutki wycieku,brief_media_konsument,2,do_wyslania,https://businessinsider.com.pl/biznes/kontakt/vxyrt59,
+M07,Media,Spider's Web — news desk,news@spidersweb.pl,,Kąt: zależność od jednego vendora danych zdrowotnych,brief_media_konsument,2,do_wyslania,https://spidersweb.pl/kontakt/,Desk newsowy
+M08,Media,NASK — kontakt dla mediów,media@nask.pl,,Nota badawcza: rama debaty po incydencie danych zdrowotnych,brief_media,2,do_wyslania,https://www.nask.pl/kontakt,Nie mylić z cert@ (incydenty)
+P01,Publiczna,Fundacja Panoptykon — media,media@panoptykon.org,,One-pager: obowiązki vendorów danych zdrowotnych,policy_onepager,1,do_wyslania,https://panoptykon.org/media,
+P02,Publiczna,Fundacja Panoptykon — fundacja,fundacja@panoptykon.org,,One-pager: obowiązki vendorów danych zdrowotnych,policy_onepager,2,do_wyslania,https://panoptykon.org/kontakt,Ogólny kontakt NGO
+P03,Publiczna,HFPC — media,media@hfhr.pl,,One-pager + pytania pod prawa pacjenta/dane,policy_onepager,1,do_wyslania,https://hfhr.pl/kontakt,
+P04,Publiczna,Rzecznik Praw Pacjenta — kancelaria,kancelaria@rpp.gov.pl,,Materiał pomocniczy: luka odpowiedzialności vendora EDM,policy_onepager_rpp,1,do_wyslania,https://www.gov.pl/web/rpp/kontakt,Uprzejmy ton urzędowy
+P05,Publiczna,Ministerstwo Cyfryzacji — kancelaria,kancelaria@cyfra.gov.pl,,One-pager: vendorzy danych zdrowotnych a obowiązki ex ante,policy_onepager_mc,2,do_wyslania,https://www.cyber.gov.pl/kontakt,Nie spamować; 1 wysyłka
+B01,Biznes,CISO / Head of Security (Twój kontakt),[UZUPEŁNIJ_EMAIL],,Memo: ryzyko łańcucha powierzeń po MyDr,board_memo,1,uzupelnij_kontakt,LinkedIn / sieć,Wstaw realny mail
+B02,Biznes,DPO / Compliance (med/insurance/fintech),[UZUPEŁNIJ_EMAIL],,Memo wewnętrzne: vendor risk + cheat sheet PR,board_memo,1,uzupelnij_kontakt,LinkedIn / sieć,
+B03,Biznes,Partner kancelarii RODO/cyber,[UZUPEŁNIJ_EMAIL],,White-label brief: kąt vendor accountability,board_memo_kancelaria,1,uzupelnij_kontakt,LinkedIn / sieć,
+B04,Biznes,Head of Risk / Legal SaaS (dane wrażliwe),[UZUPEŁNIJ_EMAIL],,Private note: vendor concentration risk,board_memo,2,uzupelnij_kontakt,LinkedIn / sieć,
+B05,Biznes,Boutique consulting / governance,[UZUPEŁNIJ_EMAIL],,Propozycja shadow advisory (retainer),board_memo_retainer,2,uzupelnij_kontakt,LinkedIn / sieć,

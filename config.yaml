@@ -1,0 +1,127 @@
+# Cyber influence bot — konfiguracja
+
+locale: pl
+timezone: Europe/Warsaw
+
+# Ile sygnałów brać do draftów w jednym przebiegu
+max_drafts_per_run: 3
+# Minimalny score (0-100), żeby wygenerować draft
+min_score: 45
+# Nie generuj ponownie draftu dla tego samego URL przez N godzin
+dedupe_hours: 48
+
+rss_feeds:
+  - name: CERT Polska
+    url: https://cert.pl/feed/
+    weight: 30
+    tags: [cert, official]
+  - name: Niebezpiecznik
+    url: https://niebezpiecznik.pl/feed/
+    weight: 28
+    tags: [media, cyber]
+  - name: Zaufana Trzecia Strona
+    url: https://zaufanatrzeciastrona.pl/feed/
+    weight: 26
+    tags: [media, cyber]
+  - name: Sekurak
+    url: https://sekurak.pl/feed/
+    weight: 24
+    tags: [media, cyber]
+  - name: CyberDefence24
+    url: https://cyberdefence24.pl/feed
+    weight: 22
+    tags: [media, defence]
+  - name: InfoSecurity24
+    url: https://infosecurity24.pl/feed
+    weight: 20
+    tags: [media, security]
+  # NASK HTML/RSS bywa niestabilny — zostawiamy CERT jako kanał oficjalny
+
+# Frazy podbijające score (case-insensitive)
+keywords:
+  high:
+    - wyciek
+    - breach
+    - ransomware
+    - zero-day
+    - 0-day
+    - cve-
+    - mydr
+    - pezel
+    - pesel
+    - dane medyczne
+    - dane osobowe
+    - phishing
+    - ddos
+    - apt
+    - krytyczna podatność
+    - uodo
+    - nis2
+    - ai act
+    - kribsi
+  medium:
+    - cyberatak
+    - incydent
+    - malware
+    - trojan
+    - botnet
+    - hasła
+    - autoryzacja
+    - cert
+    - csirt
+    - bezpieczeństwo
+    - compliance
+    - rodo
+    - deepfake
+  low:
+    - aktualizacja
+    - ostrzeżenie
+    - rekomendacja
+    - raport
+    - szkolenie
+
+# Konta X do ręcznego piggybacku (lista w draftach)
+x_accounts:
+  priority:
+    - "@CERT_Polska"
+    - "@NASK_pl"
+    - "@WeryfikacjaNASK"
+    - "@CyberWojska"
+    - "@UODOgovPL"
+    - "@niebezpiecznik"
+    - "@Zaufana3Strona"
+  amplify:
+    - "@CyberDefence24"
+    - "@Defence24pl"
+    - "@InfoSecurity24"
+    - "@tvn24"
+    - "@OnetWiadomosci"
+    - "@wirtualnapolska"
+    - "@Rzeczpospolita"
+    - "@businessinsider"
+    - "@moneypl"
+    - "@PAPinformacje"
+    - "@govpl"
+    - "@CYFRA_GOV_PL"
+
+# Szablony (używane zawsze; LLM tylko dopieszcza, jeśli dostępny)
+templates:
+  short: |
+    {hook}
+    {frame}
+    Źródło: {source} — {url}
+  medium: |
+    {hook}
+
+    Co wiemy:
+    {bullets}
+
+    Rama: {frame}
+
+    Źródło: {source}
+    {url}
+  sharp: |
+    {hook}
+    {frame}
+    Pytanie: {question}
+    {url}
