@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent
 WP_DIR = ROOT / "wordpress"
+PAGES_YAML = WP_DIR / "pages.yaml"
 INDEX_HTML = WP_DIR / "hub-index.html"
 HUB_HTML = WP_DIR / "strona-hub.html"
 CHECKLIST_HTML = WP_DIR / "checklista-72h.html"
@@ -22,6 +23,12 @@ FAQ_SCHEMA = WP_DIR / "faq-schema.json"
 CANONICAL_INDEX = "https://bezpiecznyblog.pl/hub-odpowiedzialnosci/"
 CANONICAL_HUB = "https://bezpiecznyblog.pl/odpowiedzialnosc-vendora-edm/"
 CANONICAL_CHECKLIST = "https://bezpiecznyblog.pl/checklista-72h-vendor-edm/"
+
+
+def load_pages_registry() -> dict[str, Any]:
+    import yaml
+
+    return yaml.safe_load(PAGES_YAML.read_text(encoding="utf-8"))
 
 
 def _load_env() -> None:
@@ -219,11 +226,13 @@ def discover_pages() -> list[dict[str, Any]]:
 
 def publish_hub_to_wordpress(
     *,
+    include_hub: bool = True,
     include_checklist: bool = True,
     include_index: bool = True,
+    include_cluster: bool = True,
     nest_under_index: bool | None = None,
 ) -> dict[str, Any]:
-    """Wyślij indeks + case (+ checklista) na WP.
+    """Wyślij indeks + case (+ checklista + klaster) na WP.
 
     Domyślnie dzieci mają parent=0 (płaskie URL-e). Ustaw WP_NEST_PAGES=1,
     żeby zagnieździć je pod indeksem w drzewie stron WP.
@@ -241,6 +250,7 @@ def publish_hub_to_wordpress(
         "index": None,
         "hub": None,
         "checklist": None,
+        "cluster": [],
         "canonical_index": CANONICAL_INDEX,
         "canonical_hub": CANONICAL_HUB,
         "nested": nest_under_index,
@@ -258,19 +268,18 @@ def publish_hub_to_wordpress(
         result["index"] = index_res
         index_id = int(index_res["id"])
 
-    if not HUB_HTML.exists():
-        raise FileNotFoundError(f"Brak {HUB_HTML}")
-
     child_parent = index_id if nest_under_index else 0
 
-    hub_res = ensure_page(
-        explicit_id=cfg["hub_page_id"],
-        slug=cfg["hub_slug"],
-        title="Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)",
-        content_html=HUB_HTML.read_text(encoding="utf-8"),
-        parent=child_parent,
-    )
-    result["hub"] = hub_res
+    if include_hub:
+        if not HUB_HTML.exists():
+            raise FileNotFoundError(f"Brak {HUB_HTML}")
+        result["hub"] = ensure_page(
+            explicit_id=cfg["hub_page_id"],
+            slug=cfg["hub_slug"],
+            title="Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)",
+            content_html=HUB_HTML.read_text(encoding="utf-8"),
+            parent=child_parent,
+        )
 
     if include_checklist and CHECKLIST_HTML.exists():
         try:
@@ -283,6 +292,28 @@ def publish_hub_to_wordpress(
             )
         except Exception as exc:  # noqa: BLE001
             result["checklist_error"] = str(exc)
+
+    if include_cluster and PAGES_YAML.exists():
+        registry = load_pages_registry()
+        for page in registry.get("pages") or []:
+            if page.get("kind") != "cluster":
+                continue
+            rel = page.get("file") or ""
+            path = WP_DIR / rel
+            if not path.exists():
+                result["cluster"].append({"slug": page.get("slug"), "error": f"brak pliku {rel}"})
+                continue
+            try:
+                published = ensure_page(
+                    explicit_id="",
+                    slug=str(page["slug"]),
+                    title=str(page["title"]),
+                    content_html=path.read_text(encoding="utf-8"),
+                    parent=child_parent,
+                )
+                result["cluster"].append(published)
+            except Exception as exc:  # noqa: BLE001
+                result["cluster"].append({"slug": page.get("slug"), "error": str(exc)})
 
     return result
 
@@ -317,19 +348,31 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="WordPress REST publish for vendor-EDM hub")
     parser.add_argument("--discover", action="store_true", help="Wylistuj strony (id/slug)")
-    parser.add_argument("--publish", action="store_true", help="Wypchnij indeks + case (+ checklista) na WP")
+    parser.add_argument("--publish", action="store_true", help="Wypchnij indeks + case (+ checklista + klaster) na WP")
     parser.add_argument("--hub-only", action="store_true", help="Bez checklisty")
     parser.add_argument("--no-index", action="store_true", help="Bez strony nadrzednej")
+    parser.add_argument("--no-cluster", action="store_true", help="Bez stron klastra")
+    parser.add_argument("--cluster-only", action="store_true", help="Tylko strony klastra")
     args = parser.parse_args()
 
     if args.discover:
         for row in discover_pages():
             print(f"{row['id']:>6}  {row['status']:<8}  /{row['slug']}/  {row['title'][:60]}")
-    elif args.publish:
-        out = publish_hub_to_wordpress(
-            include_checklist=not args.hub_only,
-            include_index=not args.no_index,
-        )
+    elif args.publish or args.cluster_only:
+        if args.cluster_only:
+            out = publish_hub_to_wordpress(
+                include_hub=False,
+                include_checklist=False,
+                include_index=False,
+                include_cluster=True,
+            )
+        else:
+            out = publish_hub_to_wordpress(
+                include_hub=True,
+                include_checklist=not args.hub_only,
+                include_index=not args.no_index,
+                include_cluster=not args.no_cluster,
+            )
         print(json.dumps(out, ensure_ascii=False, indent=2))
     else:
         parser.print_help()

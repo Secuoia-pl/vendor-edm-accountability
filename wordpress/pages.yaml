@@ -1,0 +1,47 @@
+# Rejestr publicznych URL-i huba (sitemap + publish).
+# base_url = kanoniczna domena (nie github.io).
+
+base_url: https://bezpiecznyblog.pl
+
+pages:
+  - slug: hub-odpowiedzialnosci
+    title: Hub odpowiedzialności
+    file: hub-index.html
+    kind: index
+    priority: "1.0"
+    changefreq: weekly
+
+  - slug: odpowiedzialnosc-vendora-edm
+    title: Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)
+    file: strona-hub.html
+    kind: case
+    priority: "0.9"
+    changefreq: weekly
+
+  - slug: checklista-72h-vendor-edm
+    title: Checklista 72h — wyciek u vendora EDM / procesora
+    file: checklista-72h.html
+    kind: tool
+    priority: "0.8"
+    changefreq: monthly
+
+  - slug: umowa-powierzenia-edm
+    title: Umowa powierzenia EDM — co warto mieć przed incydentem
+    file: cluster/umowa-powierzenia-edm.html
+    kind: cluster
+    priority: "0.7"
+    changefreq: monthly
+
+  - slug: zgloszenie-uodo-72h-vendor
+    title: Zgłoszenie do UODO w 72h przy wycieku u vendora
+    file: cluster/zgloszenie-uodo-72h-vendor.html
+    kind: cluster
+    priority: "0.7"
+    changefreq: monthly
+
+  - slug: zastrzezenie-pesel-a-dane-medyczne
+    title: Zastrzeżenie PESEL a wyciek danych medycznych
+    file: cluster/zastrzezenie-pesel-a-dane-medyczne.html
+    kind: cluster
+    priority: "0.7"
+    changefreq: monthly

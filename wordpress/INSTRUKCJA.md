@@ -3,13 +3,15 @@
 ## Struktura (logiczna)
 
 ```
-/hub-odpowiedzialnosci/          ← strona nadrzędna (indeks)
-/odpowiedzialnosc-vendora-edm/   ← case MyDr
-/checklista-72h-vendor-edm/      ← narzędzie do case'u
-/…kolejne-case…/                 ← później
+/hub-odpowiedzialnosci/                 ← indeks
+/odpowiedzialnosc-vendora-edm/          ← case MyDr
+/checklista-72h-vendor-edm/             ← narzędzie + PDF na Pages
+/umowa-powierzenia-edm/                 ← klaster
+/zgloszenie-uodo-72h-vendor/            ← klaster
+/zastrzezenie-pesel-a-dane-medyczne/    ← klaster
 ```
 
-URL-e są **płaskie** (lepsze SEO). Hierarchia jest w treści indeksu i breadcrumbach, nie w zagnieżdżeniu WP.
+URL-e są **płaskie** (lepsze SEO). Rejestr: `pages.yaml`.
 
 Kanoniczny indeks: `https://bezpiecznyblog.pl/hub-odpowiedzialnosci/`
 
@@ -17,33 +19,49 @@ Kanoniczny indeks: `https://bezpiecznyblog.pl/hub-odpowiedzialnosci/`
 
 | Plik | Co to |
 |------|--------|
-| `hub-index.html` | Strona nadrzędna — lista not |
+| `pages.yaml` | Rejestr URL → plik HTML (sitemap + publish) |
+| `sitemap-hub.xml` | Sitemap kanoniczny (blog) — generowany |
+| `hub-index.html` | Indeks |
 | `strona-hub.html` | Case MyDr |
 | `checklista-72h.html` | Checklista 72h |
+| `cluster/_TEMPLATE.html` | Szablon nowej strony klastra |
+| `cluster/*.html` | Strony 1 intencja = 1 URL |
 | `faq-schema.json` | Schema FAQ (case) |
+| `checklista-72h-vendor-edm.pdf` | Kopia PDF (źródło generowane do `docs/`) |
+
+## Budowa assetów (sitemap + PDF)
+
+```powershell
+cd "C:\Users\bkowa\droga na skróty"
+.\.venv\Scripts\pip.exe install -r requirements.txt
+.\.venv\Scripts\python.exe build_hub_assets.py
+```
+
+PDF ląduje w `docs/` i `hub/` (GitHub Pages):
+`https://secuoia-pl.github.io/vendor-edm-accountability/checklista-72h-vendor-edm.pdf`
+
+### Sitemap w GSC (blog)
+
+1. Skopiuj `wordpress/sitemap-hub.xml` do rootu domeny **albo** wklej URL-e w wtyczce SEO (Rank Math / Yoast) jako dodatkowe strony.
+2. W Search Console property `bezpiecznyblog.pl` → Sitemaps → zgłoś `https://bezpiecznyblog.pl/sitemap-hub.xml` (jeśli plik jest na root) **albo** użyj wtyczkowego sitemap + URL Inspection na 6 URL-ach.
+3. Lustro: `docs/sitemap-hub.xml` (lista kanonicznych URL-i bloga; property Pages to osobna rzecz).
 
 ## Publikacja
 
 ```powershell
-cd "C:\Users\bkowa\droga na skróty"
 .\.venv\Scripts\python.exe wp_publish.py --publish
+# tylko klaster:
+.\.venv\Scripts\python.exe wp_publish.py --cluster-only
 ```
 
-Tworzy indeks (jeśli brak) i aktualizuje case + checklistę.
+`.env`: `WP_USER`, `WP_APP_PASSWORD`, opcjonalnie ID głównych stron.
 
-`.env`: `WP_USER`, `WP_APP_PASSWORD`, opcjonalnie ID:
-`WP_INDEX_PAGE_ID`, `WP_HUB_PAGE_ID`, `WP_CHECKLIST_PAGE_ID`.
+## Nowy URL klastra
 
-Slugi: `WP_INDEX_SLUG=hub-odpowiedzialnosci` itd.
-
-Opcja `WP_NEST_PAGES=1` — zagnieżdża dzieci pod indeksem w drzewie WP (zmienia URL-e; zwykle niepotrzebne).
-
-## Kolejny case
-
-1. Nowy plik `wordpress/case-….html`
-2. Wpis w sekcji „Noty w hubie” w `hub-index.html`
-3. Rozszerz `wp_publish.py` / `.env` o nowy slug
-4. `--publish`
+1. Skopiuj `cluster/_TEMPLATE.html` → `cluster/<slug>.html`
+2. Dopisz wpis w `pages.yaml` (`kind: cluster`)
+3. Link z `hub-index.html` + wzajemne linki
+4. `python build_hub_assets.py` → `python wp_publish.py --publish`
 
 ## Rama
 

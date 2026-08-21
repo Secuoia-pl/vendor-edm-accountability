@@ -1,0 +1,91 @@
+<!--
+  SZABLON STRONY KLASTRA (1 intencja = 1 URL)
+  ============================================
+  1. Skopiuj ten plik → wordpress/cluster/<slug>.html
+  2. Uzupełnij title/slug w komentarzu i treść (H1 jest tytułem WP — tu zaczynaj od leadu)
+  3. Dopisz wpis w wordpress/pages.yaml
+  4. Link z hub-index.html + wzajemne linki do case / checklisty
+  5. python build_hub_assets.py && python wp_publish.py --publish --cluster
+
+  Tytuł WP: …
+  Slug: /…/
+  Canonical: https://bezpiecznyblog.pl/…/
+-->
+<article class="hub-cluster" lang="pl">
+<style>
+.hub-cluster {
+  --h-ink: #1a1a1a;
+  --h-muted: #5a5a5a;
+  --h-line: #d9d4c8;
+  --h-accent: #1f4d3a;
+  --h-card: #fffef9;
+  color: var(--h-ink);
+  line-height: 1.55;
+  max-width: 46rem;
+}
+.hub-cluster .h-meta { color: var(--h-muted); font-size: 0.92rem; margin: 0 0 1rem; }
+.hub-cluster .h-lead { font-size: 1.05rem; }
+.hub-cluster h2 { font-size: 1.2rem; margin: 1.75rem 0 0.65rem; color: var(--h-accent); }
+.hub-cluster p { margin: 0.65rem 0; }
+.hub-cluster ul, .hub-cluster ol { padding-left: 1.25rem; }
+.hub-cluster li { margin: 0.35rem 0; }
+.hub-cluster a { color: var(--h-accent); }
+.hub-cluster .h-box {
+  background: var(--h-card);
+  border: 1px solid var(--h-line);
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+}
+.hub-cluster .h-foot {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--h-line);
+  color: var(--h-muted);
+  font-size: 0.9rem;
+}
+.hub-cluster .h-cite {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.86rem;
+  white-space: pre-wrap;
+}
+</style>
+
+<p class="h-meta"><a href="/hub-odpowiedzialnosci/">← Hub odpowiedzialności</a> · <a href="/odpowiedzialnosc-vendora-edm/">Case MyDr</a> · <a href="/checklista-72h-vendor-edm/">Checklista 72h</a></p>
+
+<p class="h-lead">
+  <!-- Pierwsze ~60 słów: odpowiedź wprost na intencję frazy + rama. -->
+  LEAD: odpowiedź na pytanie z tytułu. Rama: problem rzadko zaczyna się w momencie ataku —
+  częściej od zależności od vendora bez równoważnej odpowiedzialności.
+</p>
+
+<div class="h-box">
+  <p style="margin:0"><strong>TL;DR</strong></p>
+  <ul style="margin:0.5rem 0 0">
+    <li>Punkt 1</li>
+    <li>Punkt 2</li>
+    <li>Punkt 3</li>
+  </ul>
+</div>
+
+<h2>Co to oznacza w praktyce</h2>
+<p>…</p>
+
+<h2>Co warto zrobić / sprawdzić</h2>
+<ul>
+  <li>…</li>
+</ul>
+
+<h2>Powiązane materiały</h2>
+<ul>
+  <li><a href="/odpowiedzialnosc-vendora-edm/">Odpowiedzialność vendora EDM (case MyDr)</a></li>
+  <li><a href="/checklista-72h-vendor-edm/">Checklista 72h dla placówki</a></li>
+  <li><a href="/hub-odpowiedzialnosci/">Hub odpowiedzialności</a></li>
+</ul>
+
+<h2>Jak cytować</h2>
+<div class="h-box h-cite">TYTUŁ, Bezpieczny Blog, https://bezpiecznyblog.pl/SLUG/</div>
+
+<div class="h-foot">
+  <p>Stan: DD.MM.RRRR · nie stanowi porady prawnej · bez pitchu usług</p>
+</div>
+</article>

@@ -41,4 +41,7 @@
 
 ---
 
-Stan szablonu: 2026-08-20 · hub: `hub/index.html`
+**PDF:** [checklista-72h-vendor-edm.pdf](./checklista-72h-vendor-edm.pdf)  
+**Kanonicznie:** https://bezpiecznyblog.pl/checklista-72h-vendor-edm/
+
+Stan szablonu: 2026-08-21 · hub: `hub/index.html`

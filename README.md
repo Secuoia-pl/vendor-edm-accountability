@@ -23,7 +23,8 @@ Otworzy się lokalny panel (`http://localhost:8501`):
 
 **Kanonicznie:** https://bezpiecznyblog.pl/odpowiedzialnosc-vendora-edm/  
 **Lustro:** folder `docs/` → GitHub Pages (canonical wskazuje na blog).  
-**Wklejki WP:** `wordpress/` · publikacja REST: `wp_publish.py`
+**Wklejki WP:** `wordpress/` · publikacja REST: `wp_publish.py`  
+**Sitemap + PDF:** `python build_hub_assets.py` → `wordpress/sitemap-hub.xml`, `docs/checklista-72h-vendor-edm.pdf` (szczegóły: `wordpress/INSTRUKCJA.md`)
 
 ## Tryby
 
