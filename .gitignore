@@ -7,3 +7,8 @@ data/last_ranking.json
 drafts/*.md
 !drafts/.gitkeep
 !data/.gitkeep
+
+.~lock.*
+*.json#
+data/last_analyze_input.json
+

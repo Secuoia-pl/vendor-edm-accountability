@@ -2,7 +2,7 @@
 
 Lokalny pipeline „droga na skróty” dla cyber:
 
-`RSS (PL) → scoring → 3 wersje posta → pliki do akceptacji (+ opcjonalnie Telegram)`
+`RSS (PL) → scoring → 3 wersje posta → pliki do akceptacji (+ ntfy / Signal)`
 
 ## Proste UI
 
@@ -42,7 +42,7 @@ Otworzy się lokalny panel (`http://localhost:8501`):
 3. Deduplikacja URL (nie spamuje tym samym newsem)
 4. Generowanie 3 draftów: **short / medium / sharp**
 5. Lista kont do piggybacku w każdym pliku
-6. Opcjonalny ping na Telegram
+6. Opcjonalny ping ntfy / Signal (`NOTIFY.md`)
 
 ## Czego świadomie NIE automatyzujemy na start
 
@@ -77,11 +77,9 @@ Wynik: `drafts/analyze-*.md` + `.json` (PENDING_APPROVAL) — changelog, FAQ, po
 .\.venv\Scripts\python.exe analyze.py --provider atlas
 ```
 
-## Telegram (opcjonalnie)
+## Powiadomienia (ntfy + Signal)
 
-1. Stwórz bota u `@BotFather`
-2. Wyślij do niego `/start`
-3. Wpisz token i chat_id do `.env`
+Zobacz `NOTIFY.md`. Telegram usunięty z pipeline.
 
 ## Proponowany rytm dnia
 

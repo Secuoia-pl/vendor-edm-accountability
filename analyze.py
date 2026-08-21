@@ -473,6 +473,17 @@ def run_analyze(*, dry_run: bool = False, provider: str | None = None) -> dict[s
     _print(f"Analiza -> {md_path.name}")
     _print(f"JSON    -> {json_path.name}")
     _print(f"update_hub={result.get('update_hub')} | {result.get('rationale', '')[:160]}")
+    try:
+        import notify
+
+        title, body = notify.format_analyze_alert(result, md_path.name)
+        nres = notify.notify_all(body, title=title, priority=4 if result.get("update_hub") else 3)
+        if nres.get("skipped"):
+            _print(f"Notify: {nres.get('reason')}")
+        else:
+            _print(f"Notify: {nres}")
+    except Exception as exc:  # noqa: BLE001
+        _print(f"Notify failed: {exc}")
     return result
 
 

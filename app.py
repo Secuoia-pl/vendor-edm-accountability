@@ -326,7 +326,11 @@ def page_drafts() -> None:
     if a2.button("Oznacz DONE", type="primary", use_container_width=True, key=f"done_{draft_id}"):
         set_status(draft["path"], "DONE")
         if draft["kind"] == "analyze" and (push_pages or push_wp):
+            import importlib
+
             import hub_publish
+
+            hub_publish = importlib.reload(hub_publish)
 
             with st.spinner("Publikuje hub (Pages / WordPress)..."):
                 result = hub_publish.publish_analyze_draft(

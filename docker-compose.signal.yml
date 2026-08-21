@@ -1,0 +1,18 @@
+# Opcjonalny stack Signal REST (Docker)
+# 1) docker compose up -d
+# 2) otwórz http://127.0.0.1:8080/v1/qrcodelink?device_name=secuoia-hub
+# 3) zeskanuj QR w Signal → Linked Devices
+# 4) ustaw SIGNAL_* w .env i: python notify.py --message "test"
+
+services:
+  signal-cli-rest-api:
+    image: bbernhard/signal-cli-rest-api:latest
+    environment:
+      - MODE=json-rpc
+    ports:
+      - "8080:8080"
+    volumes:
+      - signal-cli-config:/home/.local/share/signal-cli
+
+volumes:
+  signal-cli-config:

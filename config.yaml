@@ -104,6 +104,17 @@ x_accounts:
     - "@govpl"
     - "@CYFRA_GOV_PL"
 
+# Analiza LLM pod hub (analyze.py) — Atlas chat / Wiro Seed|Grok
+analyze:
+  provider: atlas   # atlas | wiro | auto
+  model: Qwen/Qwen3-235B-A22B-Instruct-2507
+  # alternatywnie: xai/grok-4.6 (bywa wolniejszy / 504)
+  wiro_model: ByteDance/seed-v2.1-turbo
+  top_n: 5
+  min_score: 40
+  temperature: 0.3
+  max_tokens: 1800
+
 # Szablony (używane zawsze; LLM tylko dopieszcza, jeśli dostępny)
 templates:
   short: |

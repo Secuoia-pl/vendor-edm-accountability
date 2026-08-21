@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import re
+import sys
 import time
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta, timezone
@@ -18,6 +19,13 @@ from xml.etree import ElementTree as ET
 import urllib.request
 import yaml
 from dotenv import load_dotenv
+
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -364,7 +372,7 @@ def maybe_llm_polish(text: str, style: str) -> str | None:
             body = json.loads(resp.read().decode("utf-8"))
         return body["choices"][0]["message"]["content"].strip()
     except Exception as exc:  # noqa: BLE001
-        print(f"LLM niedostępny ({exc}) — zostawiam szablon.")
+        print(f"LLM niedostepny ({exc}) - zostawiam szablon.")
         return None
 
 
@@ -418,22 +426,18 @@ Amplify: {amplify}
     return path
 
 
-def notify_telegram(text: str) -> None:
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
-    chat_id = os.getenv("TELEGRAM_CHAT_ID")
-    if not token or not chat_id:
-        return
-    payload = json.dumps({"chat_id": chat_id, "text": text[:3500]}).encode("utf-8")
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendMessage",
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
+def notify_draft(text: str) -> None:
+    """ntfy / Signal — bez Telegrama."""
     try:
-        urllib.request.urlopen(req, timeout=20).read()
+        import notify
+
+        res = notify.notify_all(text[:3500], title="Cyber draft", priority=3)
+        if res.get("skipped"):
+            return
+        if any(isinstance(v, dict) and not v.get("ok") for v in res.values()):
+            print(f"Notify partial fail: {res}")
     except Exception as exc:  # noqa: BLE001
-        print(f"Telegram notify failed: {exc}")
+        print(f"Notify failed: {exc}")
 
 
 def run_once(use_llm: bool = True) -> list[Path]:
@@ -468,7 +472,7 @@ def run_once(use_llm: bool = True) -> list[Path]:
         written.append(path)
         print(f"  [{sig.score}] {sig.source}: {sig.title[:80]}")
         print(f"      -> {path.name}")
-        notify_telegram(
+        notify_draft(
             f"Cyber draft ({sig.score}/100)\n{sig.title}\n{sig.url}\nPlik: {path.name}"
         )
 
