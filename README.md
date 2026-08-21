@@ -21,13 +21,9 @@ Otworzy się lokalny panel (`http://localhost:8501`):
 
 ## Hub publiczny (zero DM / SEO)
 
-Folder `hub/` — artefakt do GitHub Pages:
-
-- `hub/index.html` — strona kanoniczna + FAQ schema
-- `hub/checklist-72h.md` — checklista do kradzieży
-- `hub/llms.txt` + `SUMMARY.md` — pod AI / cytowania
-
-Plan publikacji: `plan-14-dni-zero-dm.md`
+**Kanonicznie:** https://bezpiecznyblog.pl/odpowiedzialnosc-vendora-edm/  
+**Lustro:** folder `docs/` → GitHub Pages (canonical wskazuje na blog).  
+**Wklejki WP:** `wordpress/` · publikacja REST: `wp_publish.py`
 
 ## Tryby
 
@@ -36,6 +32,8 @@ Plan publikacji: `plan-14-dni-zero-dm.md`
 | `.\.venv\Scripts\python.exe bot.py --once --no-llm` | jeden przebieg, tylko szablony |
 | `.\.venv\Scripts\python.exe bot.py --once` | jak wyżej + dopieszczenie LLM (jeśli klucz w `.env`) |
 | `.\.venv\Scripts\python.exe bot.py --loop --interval 30 --no-llm` | co 30 min |
+| `.\.venv\Scripts\python.exe analyze.py --dry-run` | RSS → lokalna analiza stub (bez API) |
+| `.\.venv\Scripts\python.exe analyze.py --provider atlas` | RSS → Grok/Atlas → draft hub/LI/X |
 
 ## Co jest zautomatyzowane
 
@@ -66,6 +64,18 @@ Edytuj `config.yaml`:
 
 W `.env` ustaw `OPENAI_API_KEY` (albo klucz OpenRouter + `OPENAI_BASE_URL`).  
 Bez klucza bot i tak działa na szablonach.
+
+### Analiza pod hub (`analyze.py`)
+
+Używa **Atlas** (`ATLASCLOUD_API_KEY`, domyślnie `xai/grok-4.6`) albo **Wiro** (`WIRO_API_KEY` + Seed/Grok).  
+Wynik: `drafts/analyze-*.md` + `.json` (PENDING_APPROVAL) — changelog, FAQ, post LI, wątek X.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+# skopiuj klucze do .env (patrz .env.example)
+.\.venv\Scripts\python.exe analyze.py --dry-run
+.\.venv\Scripts\python.exe analyze.py --provider atlas
+```
 
 ## Telegram (opcjonalnie)
 

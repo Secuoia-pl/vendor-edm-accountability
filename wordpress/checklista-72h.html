@@ -1,0 +1,89 @@
+<!--
+  Strona uzupełniająca — Checklista 72h
+  Tytuł WP: Checklista 72h — wyciek u vendora EDM / procesora
+  Slug: /checklista-72h-vendor-edm/
+  Wklej jako Custom HTML. Linkuj z hubem.
+-->
+<article class="vendor-edm-checklist" lang="pl">
+<style>
+.vendor-edm-checklist {
+  --vedm-ink: #1a1a1a;
+  --vedm-muted: #5a5a5a;
+  --vedm-line: #d9d4c8;
+  --vedm-accent: #1f4d3a;
+  --vedm-card: #fffef9;
+  color: var(--vedm-ink);
+  line-height: 1.55;
+  max-width: 46rem;
+}
+.vendor-edm-checklist .vedm-meta { color: var(--vedm-muted); font-size: 0.92rem; }
+.vendor-edm-checklist .vedm-box {
+  background: var(--vedm-card);
+  border: 1px solid var(--vedm-line);
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+}
+.vendor-edm-checklist h2 { font-size: 1.2rem; margin: 1.75rem 0 0.65rem; color: var(--vedm-accent); }
+.vendor-edm-checklist ul { padding-left: 1.25rem; }
+.vendor-edm-checklist li { margin: 0.4rem 0; }
+.vendor-edm-checklist a { color: var(--vedm-accent); }
+.vendor-edm-checklist .vedm-foot {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vedm-line);
+  color: var(--vedm-muted);
+  font-size: 0.9rem;
+}
+</style>
+
+<p class="vedm-meta"><strong>Dla:</strong> administrator danych (placówka / praktyka)<br>
+<strong>Cel:</strong> uporządkować pierwsze działania bez czekania na „pełny obraz z mediów”<br>
+<strong>Licencja:</strong> wolno kopiować do memo wewnętrznego; przy publikacji podaj źródło.</p>
+
+<div class="vedm-box">
+  <p><strong>Rama:</strong> problem zaczyna się od zależności od vendora, nie od samego ataku.</p>
+  <p>Nota główna: <a href="/odpowiedzialnosc-vendora-edm/">Odpowiedzialność vendora EDM (case MyDr)</a></p>
+</div>
+
+<h2>0–4 h</h2>
+<ul>
+  <li>☐ Potwierdź, czy korzystacie z danego dostawcy i w jakim module (EDM / terminarz / inne)</li>
+  <li>☐ Wyznacz ownera incydentu (IOD + IT/security + zarządzanie)</li>
+  <li>☐ Zamroź spekulacyjną komunikację zewnętrzną („nie wiemy jeszcze zakresu”)</li>
+</ul>
+
+<h2>4–24 h</h2>
+<ul>
+  <li>☐ Pismo / ticket do procesora: zakres tenantów, kategorie danych, timeline, IOCs, rekomendacje</li>
+  <li>☐ Poproś o listę: czy Wasze ID klienta / baza jest w zakresie (tak / nie / nieustalone)</li>
+  <li>☐ Zabezpiecz logi własne (dostępy, integracje, eksporty)</li>
+</ul>
+
+<h2>24–72 h</h2>
+<ul>
+  <li>☐ Udokumentuj ocenę ryzyka (dla Waszych osób / danych)</li>
+  <li>☐ Decyzja: zgłoszenie do UODO — tak / nie / wstępne + uzasadnienie</li>
+  <li>☐ Decyzja: zawiadomienie pacjentów — tak / nie / po doprecyzowaniu zakresu</li>
+  <li>☐ Przygotuj komunikat antyphishing (recepty, wizyty, „dopłaty”, kody BLIK)</li>
+  <li>☐ Sprawdź polisę cyber / obowiązki zgłoszenia do ubezpieczyciela</li>
+</ul>
+
+<h2>Równolegle (umowa i odporność)</h2>
+<ul>
+  <li>☐ Umowa powierzenia: prawo audytu, SLA powiadomień, podprocesorzy, exit/eksport</li>
+  <li>☐ Lista innych vendorów z danymi wrażliwymi (top 10) — ten sam scenariusz „co jeśli jutro?”</li>
+</ul>
+
+<h2>5 pytań do vendora (wklej)</h2>
+<ol>
+  <li>Jaki jest potwierdzony zakres per nasz tenant?</li>
+  <li>Jakie kategorie danych mogły zostać ujawnione?</li>
+  <li>Od kiedy wiecie / od kiedy informujecie administratorów?</li>
+  <li>Jakie działania containment już wykonano?</li>
+  <li>Kiedy dostaniemy materiał do oceny ryzyka i zawiadomień?</li>
+</ol>
+
+<div class="vedm-foot">
+  <p>Stan szablonu: 20.08.2026 · nie stanowi porady prawnej.</p>
+</div>
+</article>

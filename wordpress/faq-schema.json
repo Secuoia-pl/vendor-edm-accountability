@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kto odpowiada za dane pacjentów, jeśli wyciek nastąpił u dostawcy EDM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zazwyczaj placówka pozostaje administratorem, a dostawca działa jako procesor. Administrator ma własne obowiązki oceny ryzyka i zgłoszeń."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy zastrzeżenie PESEL rozwiązuje problem wycieku danych medycznych?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. Ogranicza część ryzyk tożsamościowych, ale nie zmienia modelu koncentracji danych u vendora."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ile czasu ma placówka na zgłoszenie naruszenia do UODO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gdy zgłoszenie jest wymagane: bez zbędnej zwłoki, w miarę możliwości w ciągu 72 godzin od stwierdzenia naruszenia przez administratora."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy komunikat medialny wystarczy, by zgłaszać naruszenie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To sygnał do weryfikacji u procesora. Decyzja powinna wynikać z oceny zakresu i ryzyka dla danych danej placówki."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jakie pytania warto zadać vendorowi EDM przed kolejnym incydentem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Baseline security, prawo audytu, podprocesorzy, SLA powiadomień, forensics/logi, exit i eksport danych."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego to jest temat publiczny, a nie tylko IT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pacjent zwykle nie wybiera systemu, a przy skali krajowej skutki są systemowe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy wystarczy informacja na stronie przychodni?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Przy wysokim ryzyku indywidualne zawiadomienie osób zwykle nie jest zastępowane samym komunikatem na stronie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co powinna zawierać checklista 72h?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zakres, info od procesora, ocena ryzyka, decyzja UODO/osoby, antyphishing, przegląd umowy powierzenia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vendor EDM mówi, że ustala zakres wycieku. Czy pacjent ma czekać, aż sam się odezwie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie. Obowiązek wobec osoby, której dane dotyczą, spoczywa na administratorze (placówka), a nie na vendorze-procesorze. Ustalanie zakresu nie zawiesza pytania o zakres, charakter danych i indywidualną informację."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego to problem odpowiedzialności vendora, skoro był atak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atak jest zdarzeniem. Problem zaczyna się wcześniej: miliony pacjentów zależą od jednego dostawcy EDM, którego nie wybierali, bez równoważnej odpowiedzialności."
+      }
+    }
+  ]
+}
