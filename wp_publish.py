@@ -14,10 +14,12 @@ from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent
 WP_DIR = ROOT / "wordpress"
+INDEX_HTML = WP_DIR / "hub-index.html"
 HUB_HTML = WP_DIR / "strona-hub.html"
 CHECKLIST_HTML = WP_DIR / "checklista-72h.html"
 FAQ_SCHEMA = WP_DIR / "faq-schema.json"
 
+CANONICAL_INDEX = "https://bezpiecznyblog.pl/hub-odpowiedzialnosci/"
 CANONICAL_HUB = "https://bezpiecznyblog.pl/odpowiedzialnosc-vendora-edm/"
 CANONICAL_CHECKLIST = "https://bezpiecznyblog.pl/checklista-72h-vendor-edm/"
 
@@ -36,8 +38,10 @@ def wp_config() -> dict[str, str]:
         "base_url": base,
         "user": (os.getenv("WP_USER") or "").strip(),
         "app_password": (os.getenv("WP_APP_PASSWORD") or "").strip().replace(" ", ""),
+        "index_page_id": (os.getenv("WP_INDEX_PAGE_ID") or "").strip(),
         "hub_page_id": (os.getenv("WP_HUB_PAGE_ID") or "").strip(),
         "checklist_page_id": (os.getenv("WP_CHECKLIST_PAGE_ID") or "").strip(),
+        "index_slug": (os.getenv("WP_INDEX_SLUG") or "hub-odpowiedzialnosci").strip(),
         "hub_slug": (os.getenv("WP_HUB_SLUG") or "odpowiedzialnosc-vendora-edm").strip(),
         "checklist_slug": (os.getenv("WP_CHECKLIST_SLUG") or "checklista-72h-vendor-edm").strip(),
     }
@@ -103,10 +107,21 @@ def resolve_page_id(explicit_id: str, slug: str) -> int:
     return found
 
 
-def update_page(page_id: int, *, content_html: str, title: str | None = None) -> dict[str, Any]:
+def update_page(
+    page_id: int,
+    *,
+    content_html: str,
+    title: str | None = None,
+    parent: int | None = None,
+    slug: str | None = None,
+) -> dict[str, Any]:
     payload: dict[str, Any] = {"content": wrap_wp_html_block(content_html)}
     if title:
         payload["title"] = title
+    if parent is not None:
+        payload["parent"] = int(parent)
+    if slug:
+        payload["slug"] = slug
     with _client() as client:
         resp = client.post(f"/pages/{page_id}", json=payload)
         if resp.status_code >= 400:
@@ -117,7 +132,68 @@ def update_page(page_id: int, *, content_html: str, title: str | None = None) ->
         "link": data.get("link"),
         "modified": data.get("modified"),
         "status": data.get("status"),
+        "parent": data.get("parent"),
     }
+
+
+def create_page(
+    *,
+    title: str,
+    slug: str,
+    content_html: str,
+    parent: int | None = None,
+    status: str = "publish",
+) -> dict[str, Any]:
+    payload: dict[str, Any] = {
+        "title": title,
+        "slug": slug,
+        "status": status,
+        "content": wrap_wp_html_block(content_html),
+    }
+    if parent is not None:
+        payload["parent"] = int(parent)
+    with _client() as client:
+        resp = client.post("/pages", json=payload)
+        if resp.status_code >= 400:
+            raise RuntimeError(f"WP create page HTTP {resp.status_code}: {resp.text[:500]}")
+        data = resp.json()
+    return {
+        "id": data.get("id"),
+        "link": data.get("link"),
+        "modified": data.get("modified"),
+        "status": data.get("status"),
+        "parent": data.get("parent"),
+        "created": True,
+    }
+
+
+def ensure_page(
+    *,
+    explicit_id: str,
+    slug: str,
+    title: str,
+    content_html: str,
+    parent: int | None = None,
+) -> dict[str, Any]:
+    """Update if exists (by id/slug), otherwise create."""
+    if explicit_id:
+        return update_page(
+            int(explicit_id),
+            content_html=content_html,
+            title=title,
+            parent=parent,
+            slug=slug,
+        )
+    existing = find_page_id_by_slug(slug)
+    if existing is not None:
+        return update_page(
+            existing,
+            content_html=content_html,
+            title=title,
+            parent=parent,
+            slug=slug,
+        )
+    return create_page(title=title, slug=slug, content_html=content_html, parent=parent)
 
 
 def discover_pages() -> list[dict[str, Any]]:
@@ -141,31 +217,69 @@ def discover_pages() -> list[dict[str, Any]]:
     return out
 
 
-def publish_hub_to_wordpress(*, include_checklist: bool = True) -> dict[str, Any]:
-    """Wyślij lokalne pliki wordpress/*.html na strony WP."""
+def publish_hub_to_wordpress(
+    *,
+    include_checklist: bool = True,
+    include_index: bool = True,
+    nest_under_index: bool | None = None,
+) -> dict[str, Any]:
+    """Wyślij indeks + case (+ checklista) na WP.
+
+    Domyślnie dzieci mają parent=0 (płaskie URL-e). Ustaw WP_NEST_PAGES=1,
+    żeby zagnieździć je pod indeksem w drzewie stron WP.
+    """
     cfg = wp_config()
+    if nest_under_index is None:
+        nest_under_index = (os.getenv("WP_NEST_PAGES") or "").strip().lower() in {
+            "1",
+            "true",
+            "yes",
+            "tak",
+        }
+
+    result: dict[str, Any] = {
+        "index": None,
+        "hub": None,
+        "checklist": None,
+        "canonical_index": CANONICAL_INDEX,
+        "canonical_hub": CANONICAL_HUB,
+        "nested": nest_under_index,
+    }
+
+    index_id: int | None = None
+    if include_index and INDEX_HTML.exists():
+        index_res = ensure_page(
+            explicit_id=cfg["index_page_id"],
+            slug=cfg["index_slug"],
+            title="Hub odpowiedzialności",
+            content_html=INDEX_HTML.read_text(encoding="utf-8"),
+            parent=None,
+        )
+        result["index"] = index_res
+        index_id = int(index_res["id"])
+
     if not HUB_HTML.exists():
         raise FileNotFoundError(f"Brak {HUB_HTML}")
 
-    hub_id = resolve_page_id(cfg["hub_page_id"], cfg["hub_slug"])
-    hub_html = HUB_HTML.read_text(encoding="utf-8")
-    result: dict[str, Any] = {
-        "hub": update_page(
-            hub_id,
-            content_html=hub_html,
-            title="Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)",
-        ),
-        "checklist": None,
-        "canonical": CANONICAL_HUB,
-    }
+    child_parent = index_id if nest_under_index else 0
+
+    hub_res = ensure_page(
+        explicit_id=cfg["hub_page_id"],
+        slug=cfg["hub_slug"],
+        title="Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)",
+        content_html=HUB_HTML.read_text(encoding="utf-8"),
+        parent=child_parent,
+    )
+    result["hub"] = hub_res
 
     if include_checklist and CHECKLIST_HTML.exists():
         try:
-            cl_id = resolve_page_id(cfg["checklist_page_id"], cfg["checklist_slug"])
-            result["checklist"] = update_page(
-                cl_id,
-                content_html=CHECKLIST_HTML.read_text(encoding="utf-8"),
+            result["checklist"] = ensure_page(
+                explicit_id=cfg["checklist_page_id"],
+                slug=cfg["checklist_slug"],
                 title="Checklista 72h — wyciek u vendora EDM / procesora",
+                content_html=CHECKLIST_HTML.read_text(encoding="utf-8"),
+                parent=child_parent,
             )
         except Exception as exc:  # noqa: BLE001
             result["checklist_error"] = str(exc)
@@ -203,15 +317,19 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="WordPress REST publish for vendor-EDM hub")
     parser.add_argument("--discover", action="store_true", help="Wylistuj strony (id/slug)")
-    parser.add_argument("--publish", action="store_true", help="Wypchnij hub (+ checklista) na WP")
-    parser.add_argument("--hub-only", action="store_true", help="Tylko strona huba")
+    parser.add_argument("--publish", action="store_true", help="Wypchnij indeks + case (+ checklista) na WP")
+    parser.add_argument("--hub-only", action="store_true", help="Bez checklisty")
+    parser.add_argument("--no-index", action="store_true", help="Bez strony nadrzednej")
     args = parser.parse_args()
 
     if args.discover:
         for row in discover_pages():
             print(f"{row['id']:>6}  {row['status']:<8}  /{row['slug']}/  {row['title'][:60]}")
     elif args.publish:
-        out = publish_hub_to_wordpress(include_checklist=not args.hub_only)
+        out = publish_hub_to_wordpress(
+            include_checklist=not args.hub_only,
+            include_index=not args.no_index,
+        )
         print(json.dumps(out, ensure_ascii=False, indent=2))
     else:
         parser.print_help()
