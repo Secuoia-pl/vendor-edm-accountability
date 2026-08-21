@@ -152,6 +152,22 @@
           "@type": "Answer",
           "text": "Tak – zgodnie z RODO, podmiot przetwarzający dane (procesor) ma obowiązek natychmiastowego powiadomienia administratora danych, a ten – w razie wysokiego ryzyka dla praw osób – musi poinformować osoby objęte danymi. Brak takiej komunikacji może świadczyć o naruszeniu przepisów."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy firma przetwarzająca dane medyczne (np. MyDr) ponosi odpowiedzialność za wyciek?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak – jako procesor, firma ma obowiązek bezpieczeństwa zgodnie z RODO. Ale administrator danych (np. NFZ, lekarz) nadal decyduje o legalności przetwarzania. Problem pojawia się, gdy administrator przenosi ryzyko na procesora bez rzeczywistej kontroli nad jego działaniami."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dlaczego wyciek z MyDr to więcej niż problem techniczny?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To problem systemowy: koncentracja danych blisko 19 mln ludzi w jednym miejscu bez równoległych mechanizmów kontroli, przejrzystości i naprawy. Gdy taki vendor zawodzi, całe społeczeństwo staje się ranne."
+        }
       }
     ]
   }
@@ -261,62 +277,102 @@
     </ol>
 
     
+    
+    
     <h2 id="faq">FAQ</h2>
 
 
+    
     <h3>Kto odpowiada za dane pacjentów, jeśli wyciek nastąpił u dostawcy EDM?</h3>
 
+    
     <p>Zazwyczaj placówka pozostaje administratorem, a dostawca działa jako procesor. Administrator ma własne obowiązki oceny ryzyka i zgłoszeń.</p>
 
 
+    
     <h3>Czy zastrzeżenie PESEL rozwiązuje problem wycieku danych medycznych?</h3>
 
+    
     <p>Nie. Ogranicza część ryzyk tożsamościowych, ale nie zmienia modelu koncentracji danych u vendora.</p>
 
 
+    
     <h3>Ile czasu ma placówka na zgłoszenie naruszenia do UODO?</h3>
 
+    
     <p>Gdy zgłoszenie jest wymagane: bez zbędnej zwłoki, w miarę możliwości w ciągu 72 godzin od stwierdzenia naruszenia przez administratora.</p>
 
 
+    
     <h3>Czy komunikat medialny wystarczy, by zgłaszać naruszenie?</h3>
 
+    
     <p>To sygnał do weryfikacji u procesora. Decyzja powinna wynikać z oceny zakresu i ryzyka dla danych danej placówki.</p>
 
 
+    
     <h3>Jakie pytania warto zadać vendorowi EDM przed kolejnym incydentem?</h3>
 
+    
     <p>Baseline security, prawo audytu, podprocesorzy, SLA powiadomień, forensics/logi, exit i eksport danych.</p>
 
 
+    
     <h3>Dlaczego to jest temat publiczny, a nie tylko IT?</h3>
 
+    
     <p>Pacjent zwykle nie wybiera systemu, a przy skali krajowej skutki są systemowe.</p>
 
 
+    
     <h3>Czy wystarczy informacja na stronie przychodni?</h3>
 
+    
     <p>Przy wysokim ryzyku indywidualne zawiadomienie osób zwykle nie jest zastępowane samym komunikatem na stronie.</p>
 
 
+    
     <h3>Co powinna zawierać checklista 72h?</h3>
 
+    
     <p>Zakres, info od procesora, ocena ryzyka, decyzja UODO/osoby, antyphishing, przegląd umowy powierzenia.</p>
 
 
+    
     <h3>Vendor EDM mówi, że ustala zakres wycieku. Czy pacjent ma czekać, aż sam się odezwie?</h3>
 
+    
     <p>Nie. Obowiązek wobec osoby, której dane dotyczą, spoczywa na administratorze (placówka), a nie na vendora-procesorze. Ustalanie zakresu nie zawiesza pytania: czy moje dane były w zbiorze, jakiego były charakteru i kiedy dostanę indywidualną informację. Pytaj placówkę na piśmie — nie przyjmuj odesłania „to vendor”.</p>
 
 
+    
     <h3>Dlaczego to problem odpowiedzialności vendora, skoro był atak?</h3>
 
+    
     <p>Atak jest zdarzeniem. Problem zaczyna się wcześniej: miliony pacjentów zależą od jednego dostawcy EDM, którego nie wybierali, bez równoważnej odpowiedzialności, audytu i komunikacji. Pacjent nie jest stroną kontraktu z vendorem — dlatego hub trzyma ramę administrator vs procesor vs pacjent.</p>
 
 
+    
     <h3>Czy firma przetwarzająca dane medyczne (np. MyDr) musi poinformować użytkowników o wycieku?</h3>
 
+    
     <p>Tak – zgodnie z RODO, podmiot przetwarzający dane (procesor) ma obowiązek natychmiastowego powiadomienia administratora danych, a ten – w razie wysokiego ryzyka dla praw osób – musi poinformować osoby objęte danymi. Brak takiej komunikacji może świadczyć o naruszeniu przepisów.</p>
+
+
+    
+    <h3>Czy firma przetwarzająca dane medyczne (np. MyDr) ponosi odpowiedzialność za wyciek?</h3>
+
+    
+    <p>Tak – jako procesor, firma ma obowiązek bezpieczeństwa zgodnie z RODO. Ale administrator danych (np. NFZ, lekarz) nadal decyduje o legalności przetwarzania. Problem pojawia się, gdy administrator przenosi ryzyko na procesora bez rzeczywistej kontroli nad jego działaniami.</p>
+
+
+    
+    <h3>Dlaczego wyciek z MyDr to więcej niż problem techniczny?</h3>
+
+    
+    <p>To problem systemowy: koncentracja danych blisko 19 mln ludzi w jednym miejscu bez równoległych mechanizmów kontroli, przejrzystości i naprawy. Gdy taki vendor zawodzi, całe społeczeństwo staje się ranne.</p>
+
+
 
 
 
@@ -326,7 +382,10 @@
 
     <h2 id="changelog">Changelog</h2>
     <ul>
-                    <li><strong>2026-08-21</strong> — Dodano analizę przypadku MyDr w kontekście braku przejrzystości po incydencie i zależności systemu od jednego dostawcy.</li>
+                      <li><strong>2026-08-21</strong> — Dodano sekcję analizy przypadku MyDr jako przykładu ekstremalnej koncentracji ryzyka w jednym vendorze EDM.</li>
+  <li><strong>2026-08-21</strong> — Rozszerzono część o odpowiedzialności administratora vs. procesora RODO w kontekście dostępności i integralności danych medycznych.</li>
+  <li><strong>2026-08-21</strong> — Zaktualizowano przykład wycieku o informacje o drugim incydencie z przeszłości (13 mln danych skradzionych 2 lata temu).</li>
+<li><strong>2026-08-21</strong> — Dodano analizę przypadku MyDr w kontekście braku przejrzystości po incydencie i zależności systemu od jednego dostawcy.</li>
   <li><strong>2026-08-21</strong> — Zaktualizowano sekcję &#x27;Case lens&#x27; o aktualne sygnały dotyczące wycieku danych pacjentów.</li>
   <li><strong>2026-08-21</strong> — Rozszerzono FAQ o pytanie o obowiązek informowania użytkowników przez platformy EDM po naruszeniu bezpieczeństwa.</li>
 <li><strong>2026-08-21</strong> — Odnotowano sygnał: Wciąż nie wiesz, czy Twoje dane wyciekły z MyDr. Czas zadawać pytania [OPINIA]</li>

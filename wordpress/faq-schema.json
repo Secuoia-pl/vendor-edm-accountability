@@ -89,6 +89,22 @@
         "@type": "Answer",
         "text": "Tak – zgodnie z RODO, podmiot przetwarzający dane (procesor) ma obowiązek natychmiastowego powiadomienia administratora danych, a ten – w razie wysokiego ryzyka dla praw osób – musi poinformować osoby objęte danymi. Brak takiej komunikacji może świadczyć o naruszeniu przepisów."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy firma przetwarzająca dane medyczne (np. MyDr) ponosi odpowiedzialność za wyciek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak – jako procesor, firma ma obowiązek bezpieczeństwa zgodnie z RODO. Ale administrator danych (np. NFZ, lekarz) nadal decyduje o legalności przetwarzania. Problem pojawia się, gdy administrator przenosi ryzyko na procesora bez rzeczywistej kontroli nad jego działaniami."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego wyciek z MyDr to więcej niż problem techniczny?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To problem systemowy: koncentracja danych blisko 19 mln ludzi w jednym miejscu bez równoległych mechanizmów kontroli, przejrzystości i naprawy. Gdy taki vendor zawodzi, całe społeczeństwo staje się ranne."
+      }
     }
   ]
 }
