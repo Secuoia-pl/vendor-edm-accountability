@@ -43,6 +43,10 @@
     {
       "q": "Dlaczego to problem odpowiedzialności vendora, skoro był atak?",
       "a": "Atak jest zdarzeniem. Problem zaczyna się wcześniej: miliony pacjentów zależą od jednego dostawcy EDM, którego nie wybierali, bez równoważnej odpowiedzialności, audytu i komunikacji. Pacjent nie jest stroną kontraktu z vendorem — dlatego hub trzyma ramę administrator vs procesor vs pacjent."
+    },
+    {
+      "q": "Czy firma przetwarzająca dane medyczne (np. MyDr) musi poinformować użytkowników o wycieku?",
+      "a": "Tak – zgodnie z RODO, podmiot przetwarzający dane (procesor) ma obowiązek natychmiastowego powiadomienia administratora danych, a ten – w razie wysokiego ryzyka dla praw osób – musi poinformować osoby objęte danymi. Brak takiej komunikacji może świadczyć o naruszeniu przepisów."
     }
   ]
 }

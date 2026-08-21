@@ -71,7 +71,7 @@
       "name": "Vendor EDM mówi, że ustala zakres wycieku. Czy pacjent ma czekać, aż sam się odezwie?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nie. Obowiązek wobec osoby, której dane dotyczą, spoczywa na administratorze (placówka), a nie na vendorze-procesorze. Ustalanie zakresu nie zawiesza pytania o zakres, charakter danych i indywidualną informację."
+        "text": "Nie. Obowiązek wobec osoby, której dane dotyczą, spoczywa na administratorze (placówka), a nie na vendora-procesorze. Ustalanie zakresu nie zawiesza pytania: czy moje dane były w zbiorze, jakiego były charakteru i kiedy dostanę indywidualną informację. Pytaj placówkę na piśmie — nie przyjmuj odesłania „to vendor”."
       }
     },
     {
@@ -79,7 +79,15 @@
       "name": "Dlaczego to problem odpowiedzialności vendora, skoro był atak?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Atak jest zdarzeniem. Problem zaczyna się wcześniej: miliony pacjentów zależą od jednego dostawcy EDM, którego nie wybierali, bez równoważnej odpowiedzialności."
+        "text": "Atak jest zdarzeniem. Problem zaczyna się wcześniej: miliony pacjentów zależą od jednego dostawcy EDM, którego nie wybierali, bez równoważnej odpowiedzialności, audytu i komunikacji. Pacjent nie jest stroną kontraktu z vendorem — dlatego hub trzyma ramę administrator vs procesor vs pacjent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy firma przetwarzająca dane medyczne (np. MyDr) musi poinformować użytkowników o wycieku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak – zgodnie z RODO, podmiot przetwarzający dane (procesor) ma obowiązek natychmiastowego powiadomienia administratora danych, a ten – w razie wysokiego ryzyka dla praw osób – musi poinformować osoby objęte danymi. Brak takiej komunikacji może świadczyć o naruszeniu przepisów."
       }
     }
   ]
