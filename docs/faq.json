@@ -55,6 +55,14 @@
     {
       "q": "Dlaczego wyciek z MyDr to więcej niż problem techniczny?",
       "a": "To problem systemowy: koncentracja danych blisko 19 mln ludzi w jednym miejscu bez równoległych mechanizmów kontroli, przejrzystości i naprawy. Gdy taki vendor zawodzi, całe społeczeństwo staje się ranne."
+    },
+    {
+      "q": "Czy jako pacjent mogę sprawdzić, czy moje dane były wycieknięte przez MyDr?",
+      "a": "Obecnie nie ma publicznego, wiarygodnego mechanizmu pozwalającego pacjentowi na taką weryfikację. MyDr nie udostępnił narzędzi do indywidualnej weryfikacji, a oficjalne komunikaty są ogólne i opóźnione. To przykład braku odpowiedzialności wobec właściciela danych."
+    },
+    {
+      "q": "Czy powtarzające się incydenty w MyDr świadczą o czymś więcej niż o pojedynczym błędzie?",
+      "a": "Tak. Dwa znaczące wycieki w ciągu kilku lat wskazują na systemowe problemy: niedostateczne inwestycje w cyberbezpieczeństwo, brak skutecznego nadzoru oraz nieproporcjonalną moc rynkową bez równie silnej odpowiedzialności prawnej i operacyjnej."
     }
   ]
 }

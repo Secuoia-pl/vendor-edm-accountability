@@ -29,5 +29,5 @@ To: "What ex-ante duties should a nationwide-scale vendor have — and how does 
 Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr), Bezpieczny Blog, 2026-08-21, https://bezpiecznyblog.pl/odpowiedzialnosc-vendora-edm/
 
 ## Recent
-- 2026-08-21: Dodano sekcję analizy przypadku MyDr jako przykładu ekstremalnej koncentracji ryzyka w jednym vendorze EDM. | Rozszerzono część o odpowiedzialności administratora vs. procesora RODO w kontekście dostępności i integralności danych medycznych.
+- 2026-08-21: Dodano analizę drugiego incydentu w MyDr (13 mln danych sprzed 2 lat) jako dowód na chroniczne problemy bezpieczeństwa. | Zaktualizowano sekcję o braku przejrzystości dla użytkowników — pacjenci nadal nie wiedzą, czy ich dane zostały naruszone.
 
