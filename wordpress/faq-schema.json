@@ -121,6 +121,22 @@
         "@type": "Answer",
         "text": "Tak. Dwa znaczące wycieki w ciągu kilku lat wskazują na systemowe problemy: niedostateczne inwestycje w cyberbezpieczeństwo, brak skutecznego nadzoru oraz nieproporcjonalną moc rynkową bez równie silnej odpowiedzialności prawnej i operacyjnej."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy firma przetwarzająca moje dane medyczne (np. MyDr) ponosi odpowiedzialność za ich bezpieczeństwo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak, jako procesor danych musi zapewnić odpowiedni poziom ochrony. Jednak w praktyce kontrola nad tym, jak to robi, często jest niewystarczająca, a skutki naruszeń są powszechne i trudne do naprawienia. Odpowiedzialność formalna nie zawsze idzie w parze z rzeczywistą przejrzystością i konsekwencjami."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego wyciek z MyDr dotyczy aż 19 mln osób?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To skutek centralizacji danych medycznych u jednego dostawcy technologicznego. Gdy taki vendor staje się krytyczny dla działania systemu zdrowia, każdy incydent ma skalę systemową — dokładnie to, co opisuje rama 'zależność miliona ludzi od jednego podmiotu'."
+      }
     }
   ]
 }
