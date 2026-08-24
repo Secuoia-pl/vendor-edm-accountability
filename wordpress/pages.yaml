@@ -12,7 +12,8 @@ pages:
     changefreq: weekly
 
   - slug: odpowiedzialnosc-vendora-edm
-    title: Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr)
+    title: "MyDr — wyciek danych medycznych: odpowiedzialność vendora EDM"
+    seo_description: "Wyciek danych medycznych MyDr: administrator vs procesor, zgłoszenie UODO w 72h, PESEL i checklista 72h dla placówki. Fakty, 5 pytań, FAQ."
     file: strona-hub.html
     kind: case
     priority: "0.9"

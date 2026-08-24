@@ -137,6 +137,22 @@
         "@type": "Answer",
         "text": "To skutek centralizacji danych medycznych u jednego dostawcy technologicznego. Gdy taki vendor staje się krytyczny dla działania systemu zdrowia, każdy incydent ma skalę systemową — dokładnie to, co opisuje rama 'zależność miliona ludzi od jednego podmiotu'."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy firma przetwarzająca dane medyczne online może uniknąć odpowiedzialności po wycieku?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie powinna, ale często to robi. RODO nakłada obowiązki na administratora i procesora danych, jednak brakuje skutecznych narzędzi egzekwowania przejrzystości i naprawy szkód, gdy w grę wchodzą miliony osób. Przypadek MyDr pokazuje luki w tym systemie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego wyciek z MyDr jest przykładem problemu z vendor EDM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ponieważ platforma stała się krytycznym elementem infrastruktury zdrowotnej bez bycia traktowaną jak taka. Brak jawnych zobowiązań, audytów i mechanizmów reakcji po incydencie ujawnia nierównoważność: ogromna skala przetwarzania vs zerowa rozliczalność."
+      }
     }
   ]
 }

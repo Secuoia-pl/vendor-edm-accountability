@@ -1,0 +1,375 @@
+# SEO batch — pozostałe wpisy PL (+ 1 strona) pod GSC / CTR.
+# Już zrobione wcześniej (nie powtarzaj): passphrase, nfc, scam-mail, szyfrowanie
+# Uruchom: python wp_seo_posts.py --apply
+
+posts:
+  # --- GSC: wysokie impresje / 0 CTR ---
+  - slug: zrodlo-pochodzenia-zarobkow
+    post_id: 1300
+    title: "Bank pyta o źródło pochodzenia środków? Jak bezpiecznie odpowiedzieć"
+    yoast_title: "Bank pyta o źródło pochodzenia środków? Jak bezpiecznie odpowiedzieć"
+    yoast_metadesc: "Bank prosi o źródło pochodzenia zarobków lub majątku? Co wolno pytać, jak przygotować dokumenty i jak nie wpaść w panikę."
+
+  - slug: tor-podstawy
+    post_id: 715
+    title: "Tor — co to jest i jak działa sieć anonimowa (podstawy)"
+    yoast_title: "Tor — co to jest i jak działa sieć anonimowa (podstawy)"
+    yoast_metadesc: "Tor (sieć tor) wyjaśniony prosto: trasowanie cebulowe, do czego służy, czego nie daje i od czego zacząć bezpiecznie."
+
+  - slug: podstawy-vpn
+    post_id: 667
+    title: "VPN — co to jest, rodzaje i kiedy naprawdę potrzebujesz"
+    yoast_title: "VPN — co to jest, rodzaje i kiedy naprawdę potrzebujesz"
+    yoast_metadesc: "VPN bez marketingu: czym jest wirtualna sieć prywatna, jakie są rodzaje i kiedy warto, a kiedy nie."
+
+  - slug: podstawowe-zasady-bezpieczenstwa-w-sieci
+    post_id: 45
+    title: "Podstawowe zasady bezpieczeństwa w internecie — checklista"
+    yoast_title: "Podstawowe zasady bezpieczeństwa w internecie — checklista"
+    yoast_metadesc: "Zasady bezpieczeństwa w sieci w praktyce: hasła, aktualizacje, phishing, kopie zapasowe. Krótka checklista na start."
+
+  - slug: notpetya-atak-ktory-zatrzymal-swiat
+    post_id: 1230
+    title: "NotPetya — atak ransomware, który zatrzymał firmy na całym świecie"
+    yoast_title: "NotPetya — atak ransomware, który zatrzymał firmy na całym świecie"
+    yoast_metadesc: "Czym był atak NotPetya, jak się rozprzestrzeniał i jakie lekcje z 2017 wciąż obowiązują przy ransomware."
+
+  - slug: klucz-kryptograficzny
+    post_id: 629
+    type: page
+    title: "Klucz kryptograficzny — co to jest i jak działa"
+    yoast_title: "Klucz kryptograficzny — co to jest i jak działa"
+    yoast_metadesc: "Klucz kryptograficzny prosto: klucz publiczny i prywatny, klucz symetryczny oraz do czego służą w praktyce."
+
+  - slug: sztuczna-inteligencja
+    post_id: 1056
+    title: "Sztuczna inteligencja — o co chodzi z AI (bez hype’u)"
+    yoast_title: "Sztuczna inteligencja — o co chodzi z AI (bez hype’u)"
+    yoast_metadesc: "AI wyjaśnione po ludzku: czym jest sztuczna inteligencja, co potrafi dziś i gdzie zaczyna się marketing."
+
+  - slug: przyszlosc-platnosci-elektronicznych
+    post_id: 1260
+    title: "Przyszłość płatności elektronicznych: NFC, mobile i ryzyka"
+    yoast_title: "Przyszłość płatności elektronicznych: NFC, mobile i ryzyka"
+    yoast_metadesc: "Dokąd zmierzają płatności elektroniczne? Nowe technologie, wygoda i realne ryzyka bezpieczeństwa."
+
+  - slug: rosyjskie-i-bialoruskie-cyberataki-na-polska-infrastrukture
+    post_id: 1384
+    title: "Rosyjskie i białoruskie cyberataki na Polskę — co warto wiedzieć"
+    yoast_title: "Rosyjskie i białoruskie cyberataki na Polskę — co warto wiedzieć"
+    yoast_metadesc: "Cyberataki na polską infrastrukturę: kontekst, typowe wektory i dlaczego to nie jest tylko problem IT."
+
+  - slug: wplyw-kultury-na-bezpieczenstwo
+    post_id: 1603
+    title: "Jak kultura wpływa na bezpieczeństwo informacji (UE, USA, Azja)"
+    yoast_title: "Jak kultura wpływa na bezpieczeństwo informacji (UE, USA, Azja)"
+    yoast_metadesc: "Bezpieczeństwo to nie tylko technologia — jak historia i kultura kształtują praktyki ochrony informacji."
+
+  - slug: scam-na-olx
+    post_id: 839
+    title: "Scam na OLX — jak nie dać się oszukać przy zakupie i sprzedaży"
+    yoast_title: "Scam na OLX — jak nie dać się oszukać przy zakupie i sprzedaży"
+    yoast_metadesc: "Typowe oszustwa na OLX: fałszywi kupujący, „dopłaty”, linki. Jak rozpoznać scam i kiedy odpuścić transakcję."
+
+  - slug: scam-na-rekrutacje-cz-2
+    post_id: 1075
+    title: "Scam na rekrutację — jak rozpoznać fałszywą ofertę pracy"
+    yoast_title: "Scam na rekrutację — jak rozpoznać fałszywą ofertę pracy"
+    yoast_metadesc: "Analiza ataku „na rekrutację”: sygnały ostrzegawcze, typowe scenariusze i jak nie oddać dostępu do konta."
+
+  - slug: scam-na-rekrutacje
+    post_id: 738
+    title: "Wyłudzenie „na rekrutację” — schemat i obrona"
+    yoast_title: "Wyłudzenie „na rekrutację” — schemat i obrona"
+    yoast_metadesc: "Jak działa scam rekrutacyjny: fałszywe oferty, „testy” i kradzież dostępów. Co sprawdzić, zanim klikniesz."
+
+  - slug: scam-ktory-jest-troche-legalny
+    post_id: 1121
+    title: "Scam, który jest „trochę legalny” — jak nie dać się złapać"
+    yoast_title: "Scam, który jest „trochę legalny” — jak nie dać się złapać"
+    yoast_metadesc: "Gdy oferta wygląda legalnie, a i tak Cię wykiwają. Jak rozpoznać szarą strefę i chronić pieniądze."
+
+  - slug: polska-cyfrowym-tygrysem-europy
+    post_id: 1752
+    title: "Czy Polska może być cyfrowym tygrysem Europy? Ambicje vs realia"
+    yoast_title: "Czy Polska może być cyfrowym tygrysem Europy? Ambicje vs realia"
+    yoast_metadesc: "AI, cyber i inwestycje: ile w strategii Polski jest realnego potencjału, a ile szumnych zapowiedzi."
+
+  - slug: polska-liderem-ai
+    post_id: 1614
+    title: "Czy Polska ma szansę zostać liderem AI w Europie?"
+    yoast_title: "Czy Polska ma szansę zostać liderem AI w Europie?"
+    yoast_metadesc: "„Kontynent AI” a Polska: mocne strony, luki i warunki, bez których liderstwo zostanie w prezentacjach."
+
+  - slug: cyfrowy-odcisk-palca
+    post_id: 649
+    title: "Cyfrowy odcisk palca — czym jest fingerprinting w sieci"
+    yoast_title: "Cyfrowy odcisk palca — czym jest fingerprinting w sieci"
+    yoast_metadesc: "Fingerprinting przeglądarki i urządzenia: jak Cię rozpoznają bez cookies i co możesz z tym zrobić."
+
+  - slug: klucze-u2f
+    post_id: 626
+    title: "Klucze U2F — jak działa sprzętowe 2FA i po co Ci YubiKey"
+    yoast_title: "Klucze U2F — jak działa sprzętowe 2FA i po co Ci YubiKey"
+    yoast_metadesc: "U2F / FIDO: sprzętowy klucz bezpieczeństwa zamiast SMS. Jak działa i kiedy warto kupić."
+
+  - slug: jak-weryfikowac-informacje-w-internecie
+    post_id: 241
+    title: "Jak weryfikować informacje w internecie? Praktyczny przewodnik"
+    yoast_title: "Jak weryfikować informacje w internecie? Praktyczny przewodnik"
+    yoast_metadesc: "Fake news i plotki: jak sprawdzać źródła, daty i kontekst, zanim udostępnisz informację dalej."
+
+  - slug: jak-weryfikowac-informacje-w-internecie-cz-2
+    post_id: 577
+    title: "Jak weryfikować informacje w internecie — część 2"
+    yoast_title: "Jak weryfikować informacje w internecie — część 2"
+    yoast_metadesc: "Kolejne techniki weryfikacji: obrazy, archiwa, OSINT light i typowe pułapki dezinformacji."
+
+  - slug: big-tech-w-polsce
+    post_id: 1521
+    title: "Big Tech w Polsce — szansa czy ryzyko zależności?"
+    yoast_title: "Big Tech w Polsce — szansa czy ryzyko zależności?"
+    yoast_metadesc: "Cloud i platformy globalne w PL: wygoda, suwerenność cyfrowa i realne ryzyka koncentracji."
+
+  - slug: blockchain-zamiast-swift
+    post_id: 1583
+    title: "Blockchain zamiast SWIFT? Co realnie może zmienić płatności"
+    yoast_title: "Blockchain zamiast SWIFT? Co realnie może zmienić płatności"
+    yoast_metadesc: "Czy blockchain zastąpi SWIFT? Gdzie technologia pomaga, a gdzie marketing wyprzedza infrastrukturę."
+
+  - slug: efektywnosc-wykorzystania-zasobow-chmurowych
+    post_id: 1543
+    title: "Wykorzystanie zasobów w chmurze a bezpieczeństwo informacji"
+    yoast_title: "Wykorzystanie zasobów w chmurze a bezpieczeństwo informacji"
+    yoast_metadesc: "Cloud: szybkość developmentu vs bezpieczeństwo. Jak nie przepalać budżetu i nie zostawiać dziur."
+
+  # --- Puste meta / słabe tytuły ---
+  - slug: cybersecurity-congress-2026
+    post_id: 3538
+    title: "Cybersecurity Congress 2026 — czy warto iść na kolejną konferencję AI/security?"
+    yoast_title: "Cybersecurity Congress 2026 — czy warto iść?"
+    yoast_metadesc: "Cybersecurity Congress 2026: AI i security w programie. Na co patrzeć, żeby to nie była kolejna konferencja „o wszystkim”."
+
+  - slug: spoldzielczosc-cyfrowa
+    post_id: 1975
+    title: "Spółdzielczość cyfrowa — alternatywa dla platform big tech?"
+    yoast_title: "Spółdzielczość cyfrowa — alternatywa dla platform big tech?"
+    yoast_metadesc: "Czym jest spółdzielczość cyfrowa i dlaczego stare instytucje prawa słabo pasują do scentralizowanych platform."
+
+  - slug: platnosci-mobilne
+    post_id: 1247
+    title: "Płatności mobilne: BLIK, Apple Pay i Google Pay — co warto wiedzieć"
+    yoast_title: "Płatności mobilne: BLIK, Apple Pay i Google Pay"
+    yoast_metadesc: "BLIK, Apple Pay, Google Pay: jak działają, czym się różnią i jak płacić telefonem bezpieczniej."
+
+  - slug: karty-platnicze
+    post_id: 1254
+    title: "Karty płatnicze w internecie — jak płacić bezpiecznie"
+    yoast_title: "Karty płatnicze w internecie — jak płacić bezpiecznie"
+    yoast_metadesc: "CVV/CVC, 3-D Secure i pułapki sklepów online. Jak używać karty w sieci bez zbędnego ryzyka."
+
+  - slug: bezpieczne-platnosci-czyli-dlaczego-gotowka-odchodzi-do-lamusa
+    post_id: 1560
+    title: "Bezpieczne płatności bezgotówkowe — czy gotówka naprawdę odchodzi?"
+    yoast_title: "Bezpieczne płatności bezgotówkowe — czy gotówka odchodzi?"
+    yoast_metadesc: "Gotówka vs płatności elektroniczne: wygoda, prywatność i bezpieczeństwo w codziennych transakcjach."
+
+  - slug: oszustwa-zakupowe
+    post_id: 1283
+    title: "Oszustwa przy zakupach online — jak się chronić"
+    yoast_title: "Oszustwa przy zakupach online — jak się chronić"
+    yoast_metadesc: "Fałszywe sklepy, „okazje” i przelewy na niewłaściwe konto. Jak kupować w sieci i nie stracić pieniędzy."
+
+  - slug: jak-chronic-sie-przed-phishingiem
+    post_id: 437
+    title: "Jak chronić się przed phishingiem? Praktyczne zasady"
+    yoast_title: "Jak chronić się przed phishingiem? Praktyczne zasady"
+    yoast_metadesc: "Phishing mailowy i SMS: jak rozpoznać, czego nie klikać i jak zabezpieczyć konta po podejrzeniu ataku."
+
+  - slug: chron-sie-przed-wyludzeniami
+    post_id: 156
+    title: "Chroń się przed wyłudzeniami — typowe schematy i obrona"
+    yoast_title: "Chroń się przed wyłudzeniami — typowe schematy i obrona"
+    yoast_metadesc: "Wyłudzenia w sieci i przez telefon: „na wnuczka”, fałszywe płatności, kody SMS. Co robić, a czego unikać."
+
+  - slug: zostalem-oszukany-w-sieci-co-robic
+    post_id: 204
+    title: "Zostałem oszukany w sieci — co robić krok po kroku"
+    yoast_title: "Zostałem oszukany w sieci — co robić krok po kroku"
+    yoast_metadesc: "Oszukano Cię online? Kolejność działań: bank, zastrzeżenia, zgłoszenia, dowody. Bez paniki, z checklistą."
+
+  - slug: jak-zarzadzac-haslami
+    post_id: 115
+    title: "Jak zarządzać hasłami? Menadżer, passphrase i dobre nawyki"
+    yoast_title: "Jak zarządzać hasłami? Menadżer, passphrase i dobre nawyki"
+    yoast_metadesc: "Unikalne hasła bez karteczek: menadżer haseł, passphrase i dwuskładnikowe logowanie w praktyce."
+
+  - slug: po-co-mi-antywirus
+    post_id: 110
+    title: "Po co mi antywirus? Kiedy pomaga, a kiedy daje fałszywy spokój"
+    yoast_title: "Po co mi antywirus? Kiedy pomaga, a kiedy nie"
+    yoast_metadesc: "Antywirus to nie magia. Co realnie chroni dziś Windows/macOS i czego sam skaner nie załatwi."
+
+  - slug: bezpieczenstwo-smartfona
+    post_id: 515
+    title: "Jak zabezpieczyć smartfona? Checklista bezpieczeństwa"
+    yoast_title: "Jak zabezpieczyć smartfona? Checklista bezpieczeństwa"
+    yoast_metadesc: "PIN, aktualizacje, uprawnienia aplikacji, kopie i utrata telefonu. Praktyczna checklista bezpieczeństwa."
+
+  - slug: kopie-zapasowe
+    post_id: 392
+    title: "Kopie zapasowe — dlaczego i jak robić backup (3-2-1)"
+    yoast_title: "Kopie zapasowe — dlaczego i jak robić backup (3-2-1)"
+    yoast_metadesc: "Backup bez lania wody: zasada 3-2-1, ransomware i najprostszy sposób, żeby nie stracić zdjęć i dokumentów."
+
+  - slug: lepiej-kupowac-w-znanych-sklepach
+    post_id: 1001
+    title: "Dlaczego lepiej kupować w znanych sklepach? Historia fraudu"
+    yoast_title: "Dlaczego lepiej kupować w znanych sklepach? Historia fraudu"
+    yoast_metadesc: "Case fraudu zakupowego: dlaczego „okazja” poza znanym sklepem często kończy się stratą i stresem."
+
+  - slug: unifikacja-nie-federalizacja
+    post_id: 1427
+    title: "Unifikacja, nie federalizacja — o cyfrowej Europie inaczej"
+    yoast_title: "Unifikacja, nie federalizacja — o cyfrowej Europie inaczej"
+    yoast_metadesc: "Federalizacja UE w debacie publicznej vs praktyczna unifikacja standardów cyfrowych. Co naprawdę się liczy."
+
+  - slug: spacer-po-linie
+    post_id: 1398
+    title: "Spacer po linie — bezpieczeństwo między wygodą a kontrolą"
+    yoast_title: "Spacer po linie — bezpieczeństwo między wygodą a kontrolą"
+    yoast_metadesc: "Jak balansować wygodę cyfrową z kontrolą ryzyka — bez skrajności „wszystko zabronić”."
+
+  - slug: dylemat-podwojnego-zastosowania-ai
+    post_id: 1338
+    title: "AI dual-use: dylemat podwójnego zastosowania sztucznej inteligencji"
+    yoast_title: "AI dual-use: dylemat podwójnego zastosowania AI"
+    yoast_metadesc: "Ta sama AI pomaga i szkodzi. Jak myśleć o dual-use bez naiwności i bez paniki."
+
+  - slug: lustro-naszych-oczekiwan
+    post_id: 1940
+    title: "AI jako lustro oczekiwań — dlaczego model mówi to, co chcesz usłyszeć"
+    yoast_title: "AI jako lustro oczekiwań — dlaczego model mówi to, co chcesz"
+    yoast_metadesc: "Chatbot nie musi kłamać, by Cię utwierdzać. Jak AI wzmacnia oczekiwania i jak zadawać lepsze pytania."
+
+  - slug: podmiotowosc-w-erze-totalnej-predykcji
+    post_id: 1865
+    title: "Podmiotowość w erze AI — czy zostaniemy dodatkiem do modelu?"
+    yoast_title: "Podmiotowość w erze AI — czy zostaniemy dodatkiem do modelu?"
+    yoast_metadesc: "Predykcja, profile i utrata sprawczości. Czy w erze totalnej AI zachowamy podmiotowość?"
+
+  - slug: podsumowanie-roku-2025
+    post_id: 3099
+    title: "Cyberbezpieczeństwo 2025 — podsumowanie roku (liczby i wnioski)"
+    yoast_title: "Cyberbezpieczeństwo 2025 — podsumowanie roku"
+    yoast_metadesc: "Podsumowanie roku 2025 w cyber: liczby, trendy i wnioski dla Polski — bez ogólników z prezentacji."
+
+  - slug: cyber-prasowka-2
+    post_id: 2003
+    title: "Cyber prasówka #2: DSA, AI i nowe reguły dla biznesu"
+    yoast_title: "Cyber prasówka #2: DSA, AI i nowe reguły dla biznesu"
+    yoast_metadesc: "DSA, AI i cyfrowe portfele: co się zmieniło w regulacjach UE i dlaczego biznes powinien czytać drobny druk."
+
+  - slug: cyber-podsumowanie-ostatnich-tygodni
+    post_id: 1801
+    title: "Cyber podsumowanie tygodni — najważniejsze sygnały"
+    yoast_title: "Cyber podsumowanie tygodni — najważniejsze sygnały"
+    yoast_metadesc: "Krótki przegląd wydarzeń z bezpieczeństwa IT: co było istotne i co warto zapamiętać."
+
+  # --- Pozostałe PL ---
+  - slug: obudz-wewnetrznego-lenia
+    post_id: 1358
+    title: "Obudź wewnętrznego lenia — produktywność bez wypalenia"
+    yoast_title: "Obudź wewnętrznego lenia — produktywność bez wypalenia"
+    yoast_metadesc: "Jak wrócić do działania bez heroizmu: małe kroki, nawyki i realistyczne tempo pracy."
+
+  - slug: podsumowanie-roku-2023
+    post_id: 1100
+    title: "Podsumowanie roku 2023 — cyber i tech w pigułce"
+    yoast_title: "Podsumowanie roku 2023 — cyber i tech w pigułce"
+    yoast_metadesc: "Co wydarzyło się w 2023 w cyberbezpieczeństwie i technologii — krótkie podsumowanie roku."
+
+  - slug: podsumowanie-2022
+    post_id: 962
+    title: "Pierwszy rok bloga — podsumowanie 2022"
+    yoast_title: "Pierwszy rok bloga — podsumowanie 2022"
+    yoast_metadesc: "Jak startował Bezpieczny Blog: pierwszy rok, tematy i wnioski z początku drogi."
+
+  - slug: podsumowanie-testu-z-kodami-qr
+    post_id: 929
+    title: "Test kodów QR — podsumowanie i wnioski bezpieczeństwa"
+    yoast_title: "Test kodów QR — podsumowanie i wnioski bezpieczeństwa"
+    yoast_metadesc: "Eksperyment z kodami QR: co wyszło, jakie ryzyka i czego nie robić w kampaniach."
+
+  - slug: targi-pracy-mim-uw
+    post_id: 1073
+    title: "Targi Pracy MIM UW — notatki z wydarzenia"
+    yoast_title: "Targi Pracy MIM UW — notatki z wydarzenia"
+    yoast_metadesc: "Relacja z Targów Pracy MIM UW: trendy, rozmowy i obserwacje z rynku pracy IT."
+
+  - slug: patronite
+    post_id: 1044
+    title: "Patronite — wsparcie bloga i co z tego wynika"
+    yoast_title: "Patronite — wsparcie bloga Bezpieczny Blog"
+    yoast_metadesc: "Ruszył Patronite: po co, jak wspierać blog i co czytelnik z tego ma."
+
+  - slug: rachunek-sumienia-przedsiebiorcy
+    post_id: 887
+    title: "Rachunek sumienia przedsiębiorcy — wersja beta"
+    yoast_title: "Rachunek sumienia przedsiębiorcy — wersja beta"
+    yoast_metadesc: "Etyka w biznesie IT: pytania, które warto sobie zadać, zanim coś pójdzie nie tak."
+
+  - slug: cellebrite-sesja-qa
+    post_id: 875
+    title: "Cellebrite — sesja Q&A i wnioski o forensics"
+    yoast_title: "Cellebrite — sesja Q&A i wnioski o forensics"
+    yoast_metadesc: "Notatki z sesji Q&A o Cellebrite: forensics, prawo i granice narzędzi śledczych."
+
+  - slug: przymierze-archiwum
+    post_id: 1891
+    title: "Przymierze Archiwum — opowiadanie o danych i władzy"
+    yoast_title: "Przymierze Archiwum — opowiadanie o danych i władzy"
+    yoast_metadesc: "Fikcja: świat, w którym każdy bajt danych ma protokół. Opowiadanie o prywatności i kontroli."
+
+  # --- EN (lustro / GSC EN frazy) ---
+  - slug: big-tech-in-poland
+    post_id: 1710
+    title: "Big Tech in Poland — opportunity or dependency risk?"
+    yoast_title: "Big Tech in Poland — opportunity or dependency risk?"
+    yoast_metadesc: "Cloud platforms and global tech in Poland: convenience, sovereignty, and concentration risk."
+
+  - slug: poland-as-ai-leader
+    post_id: 1649
+    title: "Can Poland become a leader on the AI Continent?"
+    yoast_title: "Can Poland become a leader on the AI Continent?"
+    yoast_metadesc: "Poland's AI ambitions: strengths, gaps, and what 'AI leader' would require in practice."
+
+  - slug: cloud-resource-utilisation
+    post_id: 1677
+    title: "Cloud resource utilization, speed, and security trade-offs"
+    yoast_title: "Cloud resource utilization, speed, and security trade-offs"
+    yoast_metadesc: "How cloud efficiency affects development speed and information security — without the hype."
+
+  - slug: blockchain-instead-of-swift
+    post_id: 1670
+    title: "Blockchain instead of SWIFT? What could realistically change"
+    yoast_title: "Blockchain instead of SWIFT? What could realistically change"
+    yoast_metadesc: "Can blockchain replace SWIFT? Where the tech helps and where marketing runs ahead."
+
+  - slug: nations-digital-dna
+    post_id: 1662
+    title: "Nations' digital DNA — culture, tech, and security"
+    yoast_title: "Nations' digital DNA — culture, tech, and security"
+    yoast_metadesc: "How national culture shapes digital policy, security habits, and technology adoption."
+
+  - slug: unification-not-federalisation
+    post_id: 1717
+    title: "Unification, not federalisation — a digital Europe view"
+    yoast_title: "Unification, not federalisation — a digital Europe view"
+    yoast_metadesc: "Federalisation debates vs practical unification of digital standards in the EU."
+
+  - slug: tightrope-walk
+    post_id: 1724
+    title: "Tightrope walk — balancing convenience and control online"
+    yoast_title: "Tightrope walk — balancing convenience and control online"
+    yoast_metadesc: "Security between convenience and control: practical balance without extremes."

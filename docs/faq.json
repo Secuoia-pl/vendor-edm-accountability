@@ -1,7 +1,7 @@
 {
   "title": "Odpowiedzialność vendora EDM — FAQ",
   "lang": "pl",
-  "dateModified": "2026-08-23",
+  "dateModified": "2026-08-24",
   "frame": "Problem nie zaczyna się w momencie ataku — zaczyna się, gdy milion ludzi jest zależnych od jednego vendora bez równoważnej odpowiedzialności.",
   "questions": [
     {
@@ -71,6 +71,14 @@
     {
       "q": "Dlaczego wyciek z MyDr dotyczy aż 19 mln osób?",
       "a": "To skutek centralizacji danych medycznych u jednego dostawcy technologicznego. Gdy taki vendor staje się krytyczny dla działania systemu zdrowia, każdy incydent ma skalę systemową — dokładnie to, co opisuje rama 'zależność miliona ludzi od jednego podmiotu'."
+    },
+    {
+      "q": "Czy firma przetwarzająca dane medyczne online może uniknąć odpowiedzialności po wycieku?",
+      "a": "Nie powinna, ale często to robi. RODO nakłada obowiązki na administratora i procesora danych, jednak brakuje skutecznych narzędzi egzekwowania przejrzystości i naprawy szkód, gdy w grę wchodzą miliony osób. Przypadek MyDr pokazuje luki w tym systemie."
+    },
+    {
+      "q": "Dlaczego wyciek z MyDr jest przykładem problemu z vendor EDM?",
+      "a": "Ponieważ platforma stała się krytycznym elementem infrastruktury zdrowotnej bez bycia traktowaną jak taka. Brak jawnych zobowiązań, audytów i mechanizmów reakcji po incydencie ujawnia nierównoważność: ogromna skala przetwarzania vs zerowa rozliczalność."
     }
   ]
 }
