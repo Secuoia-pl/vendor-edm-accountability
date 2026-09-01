@@ -153,6 +153,22 @@
         "@type": "Answer",
         "text": "Ponieważ platforma stała się krytycznym elementem infrastruktury zdrowotnej bez bycia traktowaną jak taka. Brak jawnych zobowiązań, audytów i mechanizmów reakcji po incydencie ujawnia nierównoważność: ogromna skala przetwarzania vs zerowa rozliczalność."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy wyciek z MyDr oznacza, że vendor systemu powinien ponosić odpowiedzialność za naruszenie RODO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak – jeśli vendor działa jako procesor danych, ma obowiązki wynikające z art. 28 RODO. Jednak w praktyce pacjent trudno może dochodzić roszczeń bezpośrednio od niego. Problem tkwi w tym, że mimo zależności milionów użytkowników, odpowiedzialność pozostaje rozmyta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy państwo powinno tworzyć własne systemy (jak eDziennik), by uniknąć zależności od prywatnych vendorów?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Niekoniecznie. Kluczowe nie jest to, kto buduje system, ale kto i jak ponosi odpowiedzialność za jego działanie i bezpieczeństwo. Publiczny vendor też może być niewystarczająco odpowiedzialny – chyba że mechanizmy kontroli będą rzeczywiste."
+      }
     }
   ]
 }
