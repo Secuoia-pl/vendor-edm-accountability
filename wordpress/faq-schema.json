@@ -217,6 +217,22 @@
         "@type": "Answer",
         "text": "Administrator danych (np. NFZ) ma ostatnią odpowiedzialność, ale jeśli powierzył infrastrukturę firmie bez skutecznych wymogów audytu i reakcji na incydenty, to współtworzy ryzyko. Procesor (vendor) musi działać transparentnie — dziś często tego nie robi."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy dostawca systemu e-recept lub e-skierowań może być administratorem danych?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie – zgodnie z RODO, administratorem danych jest podmiot decydujący o celu i sposobie przetwarzania, np. NFZ lub szpital. Vendor (np. EDM) działa jako procesor i odpowiada tylko za bezpieczeństwo techniczne i organizacyjne, nie za decyzje o udostępnianiu czy przechowywaniu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co jeśli wyciek danych wynika z podatności w systemie trzeciego dostawcy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Odpowiedzialność administracyjna i przed organami RODO spoczywa nadal na administratorze (np. NFZ). Jednak może on dochodzić roszczeń cywilnych od procesora. Kluczowe jest, by umowy z vendorami zawierały jasne mechanizmy raportowania incydentów i współpracy po wycieku."
+      }
     }
   ]
 }
