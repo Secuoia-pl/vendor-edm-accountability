@@ -95,6 +95,14 @@
     {
       "q": "Dlaczego wyciek u jednego vendora może zagrozić milionom pacjentów?",
       "a": "Gdy pojedynczy vendor obsługuje infrastrukturę dla wielu instytucji medycznych, staje się centralnym punktem awarii. Brak standardów wymuszających redundancję, audyty i transparentność zobowiązań powoduje, że miliony osób stają się zależne od jednej struktury technicznej bez możliwości wyboru czy wpływu."
+    },
+    {
+      "q": "Czy pacjent może żądać informacji o wycieku danych bezpośrednio od MyDr?",
+      "a": "Nie wprost. MyDr działa jako procesor danych dla administratorów (np. NFZ, szpitale). Prawo do informacji przysługuje pacjentowi wobec administratora, który powinien monitorować procesora. Brak reakcji administratora to również naruszenie jego obowiązków RODO."
+    },
+    {
+      "q": "Dlaczego wyciek danych z jednego providera może dotyczyć 19 mln osób?",
+      "a": "To efekt scentralizowanej infrastruktury – gdy jeden vendor obsługuje krytyczne funkcje dla wielu podmiotów administracyjnych, staje się punktem pojedynczego zawodzenia. Bez wymogu równoważnej odpowiedzialności ryzyko systemowe rośnie wykładniczo."
     }
   ]
 }
