@@ -201,6 +201,22 @@
         "@type": "Answer",
         "text": "To efekt scentralizowanej infrastruktury – gdy jeden vendor obsługuje krytyczne funkcje dla wielu podmiotów administracyjnych, staje się punktem pojedynczego zawodzenia. Bez wymogu równoważnej odpowiedzialności ryzyko systemowe rośnie wykładniczo."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy firma obsługująca dane medyczne online może być jedynym punktem awarii dla milionów?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak — jak pokazuje przypadek MyDr. Gdy jeden vendor obsługuje dostęp do danych dla większości obywateli, jego błędy stają się kryzysem ogólnopaństwowym. To nie jest pytanie techniczne, ale kwestia architektury odpowiedzialności."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kto ponosi winę, gdy dane z e-usługi trafiają do sieci?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Administrator danych (np. NFZ) ma ostatnią odpowiedzialność, ale jeśli powierzył infrastrukturę firmie bez skutecznych wymogów audytu i reakcji na incydenty, to współtworzy ryzyko. Procesor (vendor) musi działać transparentnie — dziś często tego nie robi."
+      }
     }
   ]
 }
