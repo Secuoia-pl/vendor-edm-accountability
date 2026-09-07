@@ -1,0 +1,21 @@
+{
+  "questions": [
+    {
+      "q": "Czy to ten sam problem co wyciek u vendora EDM?",
+      "a": "Nie ten sam asset — tu środki, tam dane. Ten sam schemat: koncentracja zależności u operatora bez równoważnej, szybko egzekwowalnej odpowiedzialności wobec osób zależnych."
+    },
+    {
+      "q": "Czy kryptowaluty „służą” do omijania państwa?",
+      "a": "To teza ideologiczna, nie fakt z aktu oskarżenia. Opisowo: krypto i zagraniczny operator mogą utrudniać egzekucję i nadzór (arbitraż jurysdykcji)."
+    },
+    {
+      "q": "Czy UOKiK / KNF zwróci środki?",
+      "a": "Zwykle nie. Organy badają praktyki i gromadzą sygnały. Zwrot to ścieżka cywilna / karna / upadłościowa — nie automat."
+    },
+    {
+      "q": "Dlaczego hub nie robi timeline’u aresztowań?",
+      "a": "Bo media robią to lepiej i szybciej. Tu zostaje rama, pytania i datowane fakty potrzebne do cytowania modelu."
+    }
+  ],
+  "dateModified": "2026-09-07"
+}

@@ -1,6 +1,6 @@
 # SUMMARY — Vendor accountability / EDM health data (PL)
 
-Last updated: 2026-09-01
+Last updated: 2026-09-07
 
 ## One-line frame (PL)
 Problem nie zaczyna się w momencie ataku — zaczyna się, gdy milion ludzi jest zależnych od jednego vendora bez równoważnej odpowiedzialności.
@@ -29,5 +29,5 @@ To: "What ex-ante duties should a nationwide-scale vendor have — and how does 
 Odpowiedzialność vendora EDM przy wycieku danych zdrowotnych (case MyDr), Bezpieczny Blog, 2026-08-21, https://bezpiecznyblog.pl/odpowiedzialnosc-vendora-edm/
 
 ## Recent
-- 2026-09-01: Dodano analizę przypadku wycieku danych z MyDr jako przykład braku równoważnej odpowiedzialności vendorów systemów medycznych | Rozszerzono sekcję o rolę administratora vs procesora danych w kontekście systemów typu EDM
+- 2026-09-07: Dodano analizę przypadku MyDr jako przykład krytycznego wycieku danych medycznych przetwarzanych przez vendorów systemów EDM. | Rozszerzono sekcję o odpowiedzialności procesora vs administratora w świetle RODO i faktycznej ochrony pacjenta.
 

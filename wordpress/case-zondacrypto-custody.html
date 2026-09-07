@@ -1,0 +1,177 @@
+<!--
+  Tytuł WP: Zondacrypto — custody, koncentracja środków i odpowiedzialność operatora
+  Slug: /zondacrypto-custody-odpowiedzialnosc/
+  Canonical: https://bezpiecznyblog.pl/zondacrypto-custody-odpowiedzialnosc/
+-->
+<article class="hub-case-zonda" lang="pl">
+<style>
+.hub-case-zonda {
+  --h-ink: #1a1a1a;
+  --h-muted: #5a5a5a;
+  --h-line: #d9d4c8;
+  --h-accent: #1f4d3a;
+  --h-card: #fffef9;
+  color: var(--h-ink);
+  line-height: 1.55;
+  max-width: 46rem;
+}
+.hub-case-zonda .h-meta { color: var(--h-muted); font-size: 0.92rem; margin: 0 0 1rem; }
+.hub-case-zonda .h-nav { margin: 0 0 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--h-line); }
+.hub-case-zonda .h-nav a { margin-right: 0.85rem; color: var(--h-accent); font-size: 0.92rem; text-decoration: none; }
+.hub-case-zonda .h-nav a:hover { text-decoration: underline; }
+.hub-case-zonda .h-lead { font-size: 1.05rem; }
+.hub-case-zonda h2 { font-size: 1.2rem; margin: 1.75rem 0 0.65rem; color: var(--h-accent); }
+.hub-case-zonda h3 { font-size: 1.05rem; margin: 1.25rem 0 0.45rem; }
+.hub-case-zonda p { margin: 0.65rem 0; }
+.hub-case-zonda ul, .hub-case-zonda ol { padding-left: 1.25rem; }
+.hub-case-zonda li { margin: 0.35rem 0; }
+.hub-case-zonda a { color: var(--h-accent); }
+.hub-case-zonda .h-box {
+  background: var(--h-card);
+  border: 1px solid var(--h-line);
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+}
+.hub-case-zonda table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 0.75rem 0; }
+.hub-case-zonda th, .hub-case-zonda td {
+  border: 1px solid var(--h-line);
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+.hub-case-zonda th { background: #efeae0; }
+.hub-case-zonda .h-cite {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.86rem;
+  white-space: pre-wrap;
+}
+.hub-case-zonda .h-foot {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--h-line);
+  color: var(--h-muted);
+  font-size: 0.9rem;
+}
+</style>
+
+<p class="h-meta"><a href="/hub-odpowiedzialnosci/">← Hub odpowiedzialności</a> · Stan na 07.09.2026 · materiał publiczny · bez pitchu usług</p>
+
+<nav class="h-nav" aria-label="Spis treści">
+  <a href="#tldr">TL;DR</a>
+  <a href="#fakty">Fakty</a>
+  <a href="#rama">Rama</a>
+  <a href="#pytania">5 pytań</a>
+  <a href="#checklist">Checklista</a>
+  <a href="#faq">FAQ</a>
+  <a href="#changelog">Changelog</a>
+</nav>
+
+<p class="h-lead">
+  <strong>Zondacrypto</strong> (operator m.in. BB Trade Estonia OU) to nie tylko historia o aresztowaniach.
+  To test modelu, w którym tysiące klientów powierzają środki jednemu operatorowi custody —
+  często w strukturze wielojurysdykcyjnej — bez równoważnej, łatwo egzekwowalnej odpowiedzialności
+  wobec klienta i bez pełnej kontroli państwa nad przepływem. Poniżej: co wiadomo (roboczo),
+  czego nie wiemy i jakie pytania warto zadawać <em>zanim</em> kolejny operator padnie.
+</p>
+
+<div class="h-box" id="tldr">
+  <p style="margin:0"><strong>TL;DR</strong></p>
+  <ul style="margin:0.5rem 0 0">
+    <li><strong>Rama:</strong> problem zaczyna się od zależności od operatora, nie od samego komunikatu o śledztwie.</li>
+    <li><strong>Asset:</strong> środki klientów (custody) — inna warstwa niż dane medyczne, ten sam schemat koncentracji.</li>
+    <li><strong>Publicznie:</strong> media ogarniają VIP-ów; tu trzymamy model odpowiedzialności i pytania egzekwowalne.</li>
+  </ul>
+</div>
+
+<h2 id="fakty">Co wiemy / czego nie wiemy</h2>
+<p class="h-meta">Weryfikuj daty i źródła pierwotne (prokuratura, UOKiK, komunikaty spółek). Liczby i zakres zarzutów bywają aktualizowane.</p>
+<table>
+  <thead>
+    <tr><th>Element</th><th>Opis (roboczy)</th><th>Źródło / status</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Podmiot</td>
+      <td>Giełda / serwis kryptowalut Zondacrypto; w komunikatach wskazywany m.in. operator estoński BB Trade Estonia OU</td>
+      <td>UOKiK / media / śledztwo</td>
+    </tr>
+    <tr>
+      <td>Śledztwo</td>
+      <td>Prokuratura (m.in. Katowice / PK): wątki oszustw znacznej wartości i prania pieniędzy; tysiące zawiadomień</td>
+      <td>komunikaty prokuratury (2026)</td>
+    </tr>
+    <tr>
+      <td>Konsument</td>
+      <td>Sygnały o problemach z wypłatami; postępowanie wyjaśniające UOKiK wobec operatora (klauzule / praktyki)</td>
+      <td>UOKiK</td>
+    </tr>
+    <tr>
+      <td>Struktura</td>
+      <td>Wskazywane powiązania / rachunki w więcej niż jednym kraju (arbitraż jurysdykcji utrudnia egzekucję)</td>
+      <td>doniesienia śledcze — potwierdzać</td>
+    </tr>
+    <tr>
+      <td>Styk z państwem</td>
+      <td>W toku postępowania pojawiają się wątki dotyczące osób z wpływem na instytucje (m.in. UOKiK) — to osobna warstwa <em>capture</em>, nie tożsama z custody klienta</td>
+      <td>prokuratura / sądy — nie spekulować poza komunikatami</td>
+    </tr>
+    <tr>
+      <td>Czego nie wiemy</td>
+      <td>Ostateczna skala strat per klient; finalna lista podmiotów; kompletny przepływ środków; prawomocne wyroki</td>
+      <td>oczekiwanie na ustalenia</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="rama">Przesunięcie pytania</h2>
+<div class="h-box">
+  <p><strong>Rama (ta sama oś huba):</strong> Problem nie zaczyna się w momencie aresztu ani komunikatu o niewypłacalności — zaczyna się, gdy wielu ludzi jest zależnych od jednego operatora bez równoważnej odpowiedzialności.</p>
+  <p>Zamiast: „kto siedzi?” / „czy odzyskam monety?”</p>
+  <p>Lepiej: „jakie obowiązki ex ante powinien mieć operator custody skali krajowej — i jak klient / państwo ma w praktyce egzekwować odpowiedzialność, gdy spółka i środki są rozproszone jurysdykcyjnie?”</p>
+  <p>Most do case’u danych: <a href="/odpowiedzialnosc-vendora-edm/">vendor EDM / MyDr</a> — inny asset (dane vs środki), ten sam schemat zależności.</p>
+</div>
+
+<h2 id="pytania">5 pytań (do skopiowania)</h2>
+<ol>
+  <li>Gdzie prawnie „leżą” środki klienta (spółka, kraj, segregacja od majątku operatora) — i co to oznacza przy niewypłacalności?</li>
+  <li>Jakie minimum ujawnień i audytu powinien spełniać operator custody obsługujący masę detaliczną w PL?</li>
+  <li>Jak wygląda ścieżka reklamacji / windykacji, gdy operator jest zagraniczny, a marketing — krajowy?</li>
+  <li>Jakie sygnały wczesne (wypłaty, sponsoring, zmiany regulaminu) powinny uruchamiać reakcję UOKiK / KNF / prokuratury <em>zanim</em> skala urośnie do tysięcy zawiadomień?</li>
+  <li>Jak oddzielić odpowiedzialność za custody klientów od osobnych wątków wpływu na instytucje publiczne — żeby jedno nie zasłaniało drugiego?</li>
+</ol>
+
+<h2 id="checklist">Checklista (skrót) — klient / obserwator</h2>
+<ol>
+  <li>Ustal: kto jest kontrahentem w regulaminie (nazwa spółki, kraj) i czy środki są segregowane.</li>
+  <li>Zachowaj dowody: potwierdzenia wpłat, ID konta, korespondencję, zrzuty statusu wypłat.</li>
+  <li>Sprawdź oficjalne kanały: komunikaty spółki, UOKiK, prokuratura — nie „porady” z forów.</li>
+  <li>Rozważ zawiadomienie / zgłoszenie konsumenckie, jeśli dotyczy Cię zakres sprawy (bez gwarancji zwrotu).</li>
+  <li>Oceń inne custody: ten sam scenariusz „co jeśli jutro?” dla pozostałych giełd / brokerów.</li>
+</ol>
+
+<h2 id="faq">FAQ</h2>
+
+<h3>Czy to ten sam problem co wyciek u vendora EDM?</h3>
+<p>Nie ten sam asset — tu środki, tam dane. Ten sam schemat: koncentracja zależności u operatora bez równoważnej, szybko egzekwowalnej odpowiedzialności wobec osób zależnych.</p>
+
+<h3>Czy kryptowaluty „służą” do omijania państwa?</h3>
+<p>To teza ideologiczna, nie fakt z aktu oskarżenia. Opisowo: krypto i zagraniczny operator <em>mogą</em> utrudniać egzekucję i nadzór (arbitraż jurysdykcji). Cel istnienia rynku to osobna dyskusja — w hubie trzymamy model ryzyka i odpowiedzialności.</p>
+
+<h3>Czy UOKiK / KNF zwróci środki?</h3>
+<p>Zwykle nie. Organy badają praktyki, gromadzą sygnały, mogą wspierać ustalenie faktów. Zwrot to ścieżka cywilna / karna / upadłościowa — nie automat.</p>
+
+<h3>Dlaczego hub nie robi timeline’u aresztowań?</h3>
+<p>Bo media robią to lepiej i szybciej. Tu zostaje rama, pytania i datowane fakty potrzebne do cytowania modelu — nie wyścig z newsroomem.</p>
+
+<h2 id="cytowanie">Jak cytować</h2>
+<div class="h-box h-cite">Zondacrypto — custody, koncentracja środków i odpowiedzialność operatora, Bezpieczny Blog, stan na 07.09.2026, https://bezpiecznyblog.pl/zondacrypto-custody-odpowiedzialnosc/</div>
+
+<h2 id="changelog">Changelog</h2>
+<ul>
+  <li><strong>2026-09-07</strong> — v0.1: szkielet case’u Zondacrypto pod osią huba (custody / koncentracja / odpowiedzialność); bez spekulacji poza komunikatami publicznymi.</li>
+</ul>
+
+<div class="h-foot">
+  <p>Materiał informacyjny. Nie stanowi porady prawnej ani inwestycyjnej. Wolno kopiować fragmenty z podaniem źródła.</p>
+</div>
+</article>

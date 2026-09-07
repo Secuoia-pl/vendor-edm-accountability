@@ -1,7 +1,7 @@
 {
   "title": "Odpowiedzialność vendora EDM — FAQ",
   "lang": "pl",
-  "dateModified": "2026-09-01",
+  "dateModified": "2026-09-07",
   "frame": "Problem nie zaczyna się w momencie ataku — zaczyna się, gdy milion ludzi jest zależnych od jednego vendora bez równoważnej odpowiedzialności.",
   "questions": [
     {
@@ -87,6 +87,14 @@
     {
       "q": "Czy państwo powinno tworzyć własne systemy (jak eDziennik), by uniknąć zależności od prywatnych vendorów?",
       "a": "Niekoniecznie. Kluczowe nie jest to, kto buduje system, ale kto i jak ponosi odpowiedzialność za jego działanie i bezpieczeństwo. Publiczny vendor też może być niewystarczająco odpowiedzialny – chyba że mechanizmy kontroli będą rzeczywiste."
+    },
+    {
+      "q": "Czy firma obsługująca system EDM (np. MyDr) jest odpowiedzialna za bezpieczeństwo danych pacjentów?",
+      "a": "Firma ta działa najczęściej jako procesor danych – technicznie przetwarza informacje na rzecz administratora (np. NFZ lub szpitala). Choć ma obowiązki bezpieczeństwa wynikające z RODO, ostateczna odpowiedzialność prawna spoczywa na administratorze. Jednak w praktyce pacjent nie ma dostępu do umów ani mechanizmów kontroli procesora, co tworzy lukę w ochronie."
+    },
+    {
+      "q": "Dlaczego wyciek u jednego vendora może zagrozić milionom pacjentów?",
+      "a": "Gdy pojedynczy vendor obsługuje infrastrukturę dla wielu instytucji medycznych, staje się centralnym punktem awarii. Brak standardów wymuszających redundancję, audyty i transparentność zobowiązań powoduje, że miliony osób stają się zależne od jednej struktury technicznej bez możliwości wyboru czy wpływu."
     }
   ]
 }

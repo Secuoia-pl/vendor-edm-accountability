@@ -16,6 +16,16 @@ pages:
     seo_description: "Wyciek danych medycznych MyDr: administrator vs procesor, zgłoszenie UODO w 72h, PESEL i checklista 72h dla placówki. Fakty, 5 pytań, FAQ."
     file: strona-hub.html
     kind: case
+    case_id: mydr
+    priority: "0.9"
+    changefreq: weekly
+
+  - slug: zondacrypto-custody-odpowiedzialnosc
+    title: "Zondacrypto — custody, koncentracja środków i odpowiedzialność operatora"
+    seo_description: "Zondacrypto i custody: koncentracja środków u operatora, arbitraż jurysdykcji, pytania o odpowiedzialność. Fakty robocze, 5 pytań, FAQ — hub odpowiedzialności."
+    file: case-zondacrypto-custody.html
+    kind: case
+    case_id: zondacrypto
     priority: "0.9"
     changefreq: weekly
 
