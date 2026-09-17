@@ -233,6 +233,22 @@
         "@type": "Answer",
         "text": "Odpowiedzialność administracyjna i przed organami RODO spoczywa nadal na administratorze (np. NFZ). Jednak może on dochodzić roszczeń cywilnych od procesora. Kluczowe jest, by umowy z vendorami zawierały jasne mechanizmy raportowania incydentów i współpracy po wycieku."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy dostawca systemu medycznego (np. MyDr) ponosi odpowiedzialność za naruszenie danych?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak – jeśli przetwarza dane w imieniu administratora, jest procesorem RODO i musi zapewnić bezpieczeństwo. Brak takiego zapewnienia może skutkować sankcjami i obowiązkiem naprawy szkody. Szczegóły w analizie na stronie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jakie konsekwencje ma dla placówki lekarskiej użycie niesprawnego systemu EDM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Placówka pozostaje administratorem danych i ponosi pierwotną odpowiedzialność przed UODO, ale może dochodzić roszczeń od procesora (vendora). Kluczowe znaczenie ma umowa i dokumentacja ryzyka."
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "title": "Odpowiedzialność vendora EDM — FAQ",
   "lang": "pl",
-  "dateModified": "2026-09-07",
+  "dateModified": "2026-09-17",
   "frame": "Problem nie zaczyna się w momencie ataku — zaczyna się, gdy milion ludzi jest zależnych od jednego vendora bez równoważnej odpowiedzialności.",
   "questions": [
     {
@@ -119,6 +119,14 @@
     {
       "q": "Co jeśli wyciek danych wynika z podatności w systemie trzeciego dostawcy?",
       "a": "Odpowiedzialność administracyjna i przed organami RODO spoczywa nadal na administratorze (np. NFZ). Jednak może on dochodzić roszczeń cywilnych od procesora. Kluczowe jest, by umowy z vendorami zawierały jasne mechanizmy raportowania incydentów i współpracy po wycieku."
+    },
+    {
+      "q": "Czy dostawca systemu medycznego (np. MyDr) ponosi odpowiedzialność za naruszenie danych?",
+      "a": "Tak – jeśli przetwarza dane w imieniu administratora, jest procesorem RODO i musi zapewnić bezpieczeństwo. Brak takiego zapewnienia może skutkować sankcjami i obowiązkiem naprawy szkody. Szczegóły w analizie na stronie."
+    },
+    {
+      "q": "Jakie konsekwencje ma dla placówki lekarskiej użycie niesprawnego systemu EDM?",
+      "a": "Placówka pozostaje administratorem danych i ponosi pierwotną odpowiedzialność przed UODO, ale może dochodzić roszczeń od procesora (vendora). Kluczowe znaczenie ma umowa i dokumentacja ryzyka."
     }
   ]
 }
